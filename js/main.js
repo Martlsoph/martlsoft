@@ -1,4 +1,4 @@
-/* Martelsoft – Seitenlogik. Inhalte der Apps stehen in apps.js. */
+/* Martlsoft – Seitenlogik. Inhalte der Apps stehen in apps.js. */
 (function () {
   let io; // Beobachter fürs Einblenden, siehe observe() unten
   const $ = (s, el = document) => el.querySelector(s);
@@ -104,7 +104,7 @@
       $("#appHero").innerHTML = `<h1>App nicht gefunden</h1><p><a class="btn btn-light" href="index.html#apps">Zu allen Apps</a></p>`;
       detail.remove();
     } else {
-      document.title = `${a.name} – ${a.tagline} | Martelsoft`;
+      document.title = `${a.name} – ${a.tagline} | Martlsoft`;
       const meta = $('meta[name="description"]'); if (meta) meta.content = a.short;
       if (a.art) {
         const hero = $(".hero");

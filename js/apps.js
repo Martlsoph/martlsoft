@@ -1,5 +1,5 @@
 /* =====================================================================
-   MARTELSOFT – ALLE APPS
+   MARTLSOFT – ALLE APPS
    ---------------------------------------------------------------------
    Neue App hinzufügen:
    1. Einen Block { ... } unten kopieren und anpassen.
