@@ -68,16 +68,17 @@ const APPS = [
     id: "maki-translator",
     name: "Maki-Translator",
     tagline: "Übersetzen wie im Chat",
-    short: "Übersetzt deine Nachrichten locker formuliert – und Antworten zurück ins Deutsche.",
+    short: "Übersetzt deine Nachrichten locker formuliert – mit einem Tipp direkt in WhatsApp einfügen. Antworten zurück ins Deutsche.",
     category: "Kommunikation",
     icon: "img/apps/maki-translator.svg",
     art: "img/art/reise.svg",
     status: "apk",
     play: "",
     description:
-      "Der Maki-Translator übersetzt deine Nachrichten in dominikanisches Spanisch, Englisch, Französisch, Russisch und Tschechisch – so locker formuliert, wie man im Chat schreibt. Antworten übersetzt er zurück ins Deutsche. Die Übersetzung erledigt die KI Claude von Anthropic mit deinem eigenen Schlüssel.",
+      "Der Maki-Translator übersetzt deine Nachrichten in dominikanisches Spanisch, Englisch, Französisch, Russisch und Tschechisch – so locker formuliert, wie man im Chat schreibt. Die fertige Übersetzung fügst du mit einem Tipp direkt in WhatsApp ein. Antworten übersetzt er zurück ins Deutsche. Die Übersetzung erledigt die KI Claude von Anthropic mit deinem eigenen Schlüssel.",
     features: [
       "Dominikanisches Spanisch, Englisch, Französisch, Russisch, Tschechisch",
+      "Übersetzung mit einem Tipp direkt in WhatsApp einfügen",
       "Natürlicher Chat-Ton statt steifer Übersetzung",
       "Antworten mit einem Tipp zurück ins Deutsche",
       "Dein API-Schlüssel bleibt nur auf deinem Handy"
