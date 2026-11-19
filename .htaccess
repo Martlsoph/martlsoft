@@ -1,0 +1,46 @@
+# Martlsoft – Einstellungen für den IONOS-Webspace (Apache)
+# Auf GitHub Pages wird diese Datei ignoriert.
+
+# Immer verschlüsselt (https) und ohne "www."
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+# Eigene Fehlerseite bei falschen Links
+ErrorDocument 404 /404.html
+
+# Ordnerinhalte nicht auflisten
+Options -Indexes
+
+# Interne Dateien nicht ausliefern
+<FilesMatch "^(\.git|\.nojekyll|ANLEITUNG.*|.*\.md)$">
+  Require all denied
+</FilesMatch>
+RedirectMatch 404 /\.git
+
+# Sicherheits-Header
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Richtige Zeichenkodierung (Umlaute)
+AddDefaultCharset utf-8
+AddType image/svg+xml .svg
+
+# Schneller laden: Bilder lange zwischenspeichern, Seiten kurz
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType text/css "access plus 1 day"
+  ExpiresByType application/javascript "access plus 1 day"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml
+</IfModule>
