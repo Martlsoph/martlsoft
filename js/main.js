@@ -95,6 +95,27 @@
     render();
   }
 
+  /* Schritt-für-Schritt-Anleitung (Texte aus apps.js dürfen <b>, <a>, <code> enthalten) */
+  function guideHtml(g) {
+    return `<section class="guide" id="anleitung">
+      <div class="guide-head reveal">
+        <span class="eyebrow">Schritt für Schritt</span>
+        <h2>${esc(g.title)}</h2>
+        <p class="lead">${g.intro}</p>
+      </div>
+      ${g.need ? `<div class="guide-need reveal"><b>Das brauchst du:</b><ul>${g.need.map((n) => `<li>${n}</li>`).join("")}</ul></div>` : ""}
+      ${g.tip ? `<div class="guide-tip reveal">💡 ${g.tip}</div>` : ""}
+      <ol class="steps">
+        ${g.steps.map((s, i) => `<li class="step reveal">
+          <span class="num">${i + 1}</span>
+          <div><h3>${esc(s.title)}</h3><p>${s.text}</p>${s.note ? `<p class="note">⚠️ ${s.note}</p>` : ""}</div>
+        </li>`).join("")}
+      </ol>
+      ${g.faq ? `<div class="faq reveal"><h3>Häufige Fragen</h3>${g.faq.map((f) => `<details><summary>${esc(f.q)}</summary><p>${f.a}</p></details>`).join("")}</div>` : ""}
+      <p class="guide-help reveal">Du kommst nicht weiter? Schreib mir einfach: <a href="mailto:martlshop.co@gmail.com">martlshop.co@gmail.com</a>. Ich helfe dir gern.</p>
+    </section>`;
+  }
+
   /* ---------- App-Unterseite ---------- */
   const detail = $("#appDetail");
   if (detail) {
@@ -120,7 +141,7 @@
         <div class="app-hero">
           <img src="${esc(a.icon)}" alt="Symbol ${esc(a.name)}">
           <div><h1>${esc(a.name)}</h1><div class="tag">${esc(a.tagline)} · ${esc(a.category)}</div>
-          <div class="btns">${playBtn}<a class="btn btn-ghost" href="datenschutz.html#${esc(a.id)}">Datenschutz</a></div></div>
+          <div class="btns">${playBtn}${a.guide ? `<a class="btn btn-lemon" href="#anleitung">📖 ${esc(a.guide.button || "Anleitung")}</a>` : ""}<a class="btn btn-ghost" href="datenschutz.html#${esc(a.id)}">Datenschutz</a></div></div>
         </div>`;
 
       const shots = (a.screenshots || []).length
@@ -146,6 +167,7 @@
             </div>
           </div>
         </div>
+        ${a.guide ? guideHtml(a.guide) : ""}
         <div style="margin-top:60px" class="reveal"><span class="eyebrow">Screenshots</span><div class="shots">${shots}</div></div>
         ${APPS.length > 1 ? `<div style="margin-top:50px" class="reveal"><span class="eyebrow">Weitere Apps</span><div class="others">${APPS.filter((x) => x.id !== a.id).map((x) => `<a class="mini" href="app.html?id=${esc(x.id)}"><img src="${esc(x.icon)}" alt=""><span><b>${esc(x.name)}</b><small>${esc(x.tagline)}</small></span></a>`).join("")}</div></div>` : ""}`;
     }

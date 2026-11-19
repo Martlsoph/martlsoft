@@ -83,6 +83,48 @@ const APPS = [
       "Antworten mit einem Tipp zurück ins Deutsche",
       "Dein API-Schlüssel bleibt nur auf deinem Handy"
     ],
-    screenshots: []
+    screenshots: [],
+    guide: {
+      button: "Anleitung: Schlüssel einrichten",
+      title: "So richtest du den Maki-Translator ein",
+      intro: "Damit die App übersetzen kann, brauchst du einmalig einen eigenen „Schlüssel“ von Anthropic, der Firma hinter der KI Claude. Das ist wie ein Prepaid-Guthaben fürs Übersetzen. Es dauert etwa 10 Minuten und du musst es nur ein einziges Mal machen.",
+      need: ["Dein Handy mit dem Maki-Translator", "Eine E-Mail-Adresse", "Eine Kreditkarte oder Debitkarte für das Guthaben (z. B. 5 $)"],
+      tip: "Am bequemsten machst du die Schritte 1 bis 4 am Computer und schickst dir den Schlüssel dann z. B. per E-Mail aufs Handy. Es geht aber auch komplett am Handy.",
+      steps: [
+        {
+          title: "Konto bei Anthropic anlegen",
+          text: "Öffne die Seite <a href=\"https://console.anthropic.com\" target=\"_blank\" rel=\"noopener\">console.anthropic.com</a>. Tippe auf <b>Sign up</b> (Registrieren) und melde dich mit deiner E-Mail-Adresse an. Du bekommst eine E-Mail mit einem Link, den du anklickst. Die Seite ist auf Englisch, keine Sorge, du brauchst nur wenige Knöpfe."
+        },
+        {
+          title: "Guthaben aufladen",
+          text: "Klicke im Menü links auf <b>Billing</b> (Abrechnung) und dann auf <b>Add credits</b> bzw. <b>Buy credits</b> (Guthaben kaufen). Gib deine Karte ein und lade z. B. <b>5 $</b> auf. Das reicht für einige Hundert Übersetzungen.",
+          note: "Es gibt kein Abo. Es wird nur abgebucht, was du aufgeladen hast."
+        },
+        {
+          title: "Schlüssel erstellen",
+          text: "Klicke links auf <b>API Keys</b> und dann auf <b>Create Key</b> (Schlüssel erstellen). Gib ihm einen Namen, z. B. <b>Mein Handy</b>, und klicke auf <b>Create</b> (Erstellen)."
+        },
+        {
+          title: "Schlüssel kopieren",
+          text: "Jetzt wird dein Schlüssel angezeigt, eine lange Zeichenkette, die mit <code>sk-ant-</code> beginnt. Klicke auf <b>Copy</b> (Kopieren).",
+          note: "Wichtig: Der Schlüssel wird nur dieses eine Mal angezeigt. Kopiere ihn sofort oder schick ihn dir per E-Mail aufs Handy."
+        },
+        {
+          title: "Schlüssel in der App einfügen",
+          text: "Öffne den Maki-Translator. Tippe oben rechts auf das Menü <b>≡</b> und dann auf <b>API-Schlüssel</b>. Halte den Finger lange in das Feld, tippe auf <b>Einfügen</b> und dann auf <b>Speichern</b>."
+        },
+        {
+          title: "Fertig – los geht’s!",
+          text: "Schreib einen Satz auf Deutsch, wähle die Sprache und tippe auf Übersetzen. Mit einem Tipp fügst du die Übersetzung direkt in WhatsApp ein."
+        }
+      ],
+      faq: [
+        { q: "Was kostet das?", a: "Eine Übersetzung kostet ungefähr 1 Cent. Mit 5 $ kommst du also sehr weit. Du zahlst direkt an Anthropic, nicht an mich." },
+        { q: "Kann es plötzlich teuer werden?", a: "Nein. Es wird nur das Guthaben verbraucht, das du selbst aufgeladen hast. Zusätzlich kannst du unter <b>Limits</b> eine Monatsgrenze festlegen." },
+        { q: "Ist mein Schlüssel sicher?", a: "Der Schlüssel wird nur auf deinem Handy gespeichert. Gib ihn niemandem weiter, denn wer ihn hat, kann dein Guthaben verbrauchen." },
+        { q: "Ich habe den Schlüssel verloren. Was nun?", a: "Kein Problem. Erstelle einfach unter <b>API Keys</b> einen neuen (Schritt 3) und füge ihn in der App ein. Den alten kannst du dort löschen." },
+        { q: "Die App sagt, das Guthaben ist leer.", a: "Dann lade unter <b>Billing</b> wieder etwas auf (Schritt 2). Der Schlüssel bleibt gleich, du musst in der App nichts ändern." }
+      ]
+    }
   }
 ];
