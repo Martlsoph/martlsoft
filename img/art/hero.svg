@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <!-- Dezenter Hintergrund für den Kopfbereich: Linien, Ringe, App-Kacheln -->
+  <g fill="none" stroke="#fff" stroke-width="2" opacity=".14">
+    <circle cx="1300" cy="200" r="180"/><circle cx="1300" cy="200" r="260"/><circle cx="1300" cy="200" r="340"/>
+    <circle cx="180" cy="780" r="140"/><circle cx="180" cy="780" r="220"/>
+  </g>
+  <g fill="none" stroke="#4fc3f7" stroke-width="3" opacity=".35" stroke-linecap="round">
+    <path d="M0 620 C 300 520, 500 720, 800 600 S 1300 480, 1600 580"/>
+    <path d="M0 680 C 320 600, 520 780, 820 660 S 1320 560, 1600 650" opacity=".6"/>
+  </g>
+  <g fill="#fff" opacity=".08">
+    <rect x="80" y="120" width="70" height="70" rx="18" transform="rotate(-12 115 155)"/>
+    <rect x="740" y="80" width="46" height="46" rx="12" transform="rotate(14 763 103)"/>
+    <rect x="1480" y="700" width="80" height="80" rx="20" transform="rotate(10 1520 740)"/>
+    <rect x="560" y="780" width="54" height="54" rx="14" transform="rotate(-8 587 807)"/>
+  </g>
+  <g fill="#fff44f" opacity=".5"><circle cx="420" cy="140" r="5"/><circle cx="1050" cy="760" r="6"/><circle cx="1500" cy="420" r="4"/></g>
+</svg>

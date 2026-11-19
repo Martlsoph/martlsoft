@@ -1,0 +1,164 @@
+/* Martelsoft – Seitenlogik. Inhalte der Apps stehen in apps.js. */
+(function () {
+  let io; // Beobachter fürs Einblenden, siehe observe() unten
+  const $ = (s, el = document) => el.querySelector(s);
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  const STATUS = {
+    play: { text: "Bei Google Play", cls: "play" },
+    bald: { text: "Bald bei Google Play", cls: "" },
+    apk: { text: "Als Android-App", cls: "apk" }
+  };
+
+  /* Kopfzeile: beim Scrollen weiß, Menü auf dem Handy */
+  const header = $(".header");
+  const onScroll = () => header && header.classList.toggle("solid", window.scrollY > 30 || header.dataset.solid === "1");
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+  const burger = $(".burger"), nav = $(".nav");
+  if (burger && nav) {
+    burger.addEventListener("click", () => {
+      const open = nav.classList.toggle("open");
+      burger.setAttribute("aria-expanded", open);
+    });
+    nav.addEventListener("click", (e) => { if (e.target.tagName === "A") nav.classList.remove("open"); });
+  }
+
+  /* Jahr in der Fußzeile */
+  document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = new Date().getFullYear()));
+
+  /* Fußzeile: App-Liste */
+  const footApps = $("#footApps");
+  if (footApps) footApps.innerHTML = APPS.map((a) => `<li><a href="app.html?id=${esc(a.id)}">${esc(a.name)}</a></li>`).join("");
+
+  /* ---------- Startseite ---------- */
+  const grid = $("#appGrid");
+  if (grid) {
+    // Handy im Hero mit allen App-Symbolen
+    const home = $("#homeIcons");
+    if (home) {
+      const icons = APPS.slice(0, 11).map((a) => `<a href="app.html?id=${esc(a.id)}"><img src="${esc(a.icon)}" alt="">${esc(a.name.replace(/^MaKi-|^Maki-/, ""))}</a>`);
+      icons.push(`<a href="#apps"><span class="ph">+</span>Bald mehr</a>`);
+      home.innerHTML = icons.join("");
+    }
+    const clock = $("#clock"), date = $("#date");
+    const tick = () => {
+      const d = new Date();
+      if (clock) clock.textContent = d.toLocaleTimeString("de-DE", { hour: "2-digit", minute: "2-digit" });
+      if (date) date.textContent = d.toLocaleDateString("de-DE", { weekday: "long", day: "numeric", month: "long" });
+    };
+    tick(); setInterval(tick, 10000);
+
+    // Zahl der Apps hochzählen
+    const count = $("#appCount");
+    if (count) {
+      let n = 0; const target = APPS.length;
+      const step = () => { n++; count.textContent = n; if (n < target) setTimeout(step, 180); };
+      count.textContent = "0"; setTimeout(step, 500);
+    }
+
+    // Filter (erscheinen automatisch, sobald es mehrere Kategorien gibt)
+    const cats = [...new Set(APPS.map((a) => a.category))];
+    const chips = $("#chips"), search = $("#search");
+    let cat = "Alle", q = "";
+    if (cats.length > 1) {
+      chips.innerHTML = ["Alle", ...cats].map((c) => `<button class="chip${c === "Alle" ? " on" : ""}" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
+      chips.addEventListener("click", (e) => {
+        const b = e.target.closest(".chip"); if (!b) return;
+        cat = b.dataset.cat;
+        chips.querySelectorAll(".chip").forEach((x) => x.classList.toggle("on", x === b));
+        render();
+      });
+    }
+    if (search) search.addEventListener("input", () => { q = search.value.trim().toLowerCase(); render(); });
+
+    function card(a) {
+      const st = STATUS[a.status] || STATUS.bald;
+      return `<a class="card reveal" href="app.html?id=${esc(a.id)}">
+        ${a.art ? `<div class="card-art"><img src="${esc(a.art)}" alt="" loading="lazy"></div>` : ""}
+        ${a.neu ? `<span class="neu">Neu</span>` : ""}
+        <div class="card-top"><img src="${esc(a.icon)}" alt="Symbol ${esc(a.name)}"><div><h3>${esc(a.name)}</h3><span class="tag">${esc(a.tagline)}</span></div></div>
+        <p>${esc(a.short)}</p>
+        <div class="card-foot"><span class="badge ${st.cls}">${st.text}</span><span class="more">Ansehen</span></div>
+      </a>`;
+    }
+    function render() {
+      const list = APPS.filter((a) =>
+        (cat === "Alle" || a.category === cat) &&
+        (!q || (a.name + " " + a.tagline + " " + a.short + " " + a.category).toLowerCase().includes(q)));
+      let html = list.map(card).join("");
+      if (!list.length) html = `<div class="empty">Keine App gefunden. Probier einen anderen Suchbegriff.</div>`;
+      else if (cat === "Alle" && !q) html += `<div class="card soon reveal"><div class="plus">+</div><b>Weitere Apps in Arbeit</b><span>Schau bald wieder vorbei.</span></div>`;
+      grid.innerHTML = html;
+      observe();
+    }
+    render();
+  }
+
+  /* ---------- App-Unterseite ---------- */
+  const detail = $("#appDetail");
+  if (detail) {
+    const id = new URLSearchParams(location.search).get("id");
+    const a = APPS.find((x) => x.id === id);
+    if (!a) {
+      $("#appHero").innerHTML = `<h1>App nicht gefunden</h1><p><a class="btn btn-light" href="index.html#apps">Zu allen Apps</a></p>`;
+      detail.remove();
+    } else {
+      document.title = `${a.name} – ${a.tagline} | Martelsoft`;
+      const meta = $('meta[name="description"]'); if (meta) meta.content = a.short;
+      if (a.art) {
+        const hero = $(".hero");
+        hero.classList.add("art");
+        hero.insertAdjacentHTML("afterbegin", `<img class="hero-bg" src="${esc(a.art)}" alt="">`);
+      }
+      const st = STATUS[a.status] || STATUS.bald;
+      const playBtn = a.status === "play" && a.play
+        ? `<a class="btn btn-lemon" href="${esc(a.play)}" target="_blank" rel="noopener">▶ Bei Google Play laden</a>`
+        : `<span class="btn btn-light" aria-disabled="true">${a.status === "apk" ? "Noch nicht im Play Store" : "Bald bei Google Play"}</span>`;
+      $("#appHero").innerHTML = `
+        <a class="crumb" href="index.html#apps">← Alle Apps</a>
+        <div class="app-hero">
+          <img src="${esc(a.icon)}" alt="Symbol ${esc(a.name)}">
+          <div><h1>${esc(a.name)}</h1><div class="tag">${esc(a.tagline)} · ${esc(a.category)}</div>
+          <div class="btns">${playBtn}<a class="btn btn-ghost" href="datenschutz.html#${esc(a.id)}">Datenschutz</a></div></div>
+        </div>`;
+
+      const shots = (a.screenshots || []).length
+        ? a.screenshots.map((s) => `<img src="${esc(s)}" alt="Screenshot ${esc(a.name)}" loading="lazy">`).join("")
+        : [1, 2, 3].map(() => `<div class="shot-ph"><img src="${esc(a.icon)}" alt="">Screenshots folgen</div>`).join("");
+
+      detail.innerHTML = `
+        <div class="detail">
+          <div>
+            <div class="box reveal"><span class="eyebrow">Über die App</span><h2>Das kann ${esc(a.name)}</h2><p class="lead">${esc(a.description)}</p></div>
+            <div class="box reveal"><h3>Funktionen</h3><ul class="feat">${a.features.map((f) => `<li>${esc(f)}</li>`).join("")}</ul></div>
+          </div>
+          <div>
+            ${a.banner ? `<img class="banner reveal" src="${esc(a.banner)}" alt="${esc(a.name)}">` : ""}
+            <div class="box reveal" ${a.banner ? "" : 'style="margin-top:0"'}>
+              <h3>Auf einen Blick</h3>
+              <ul class="checks">
+                <li>Keine Werbung</li>
+                <li>${a.id === "maki-translator" ? "Texte gehen nur zum Übersetzen an die KI" : "Kein Internetzugriff, keine Datensammlung"}</li>
+                <li>${st.text}</li>
+                <li>Für Android</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:60px" class="reveal"><span class="eyebrow">Screenshots</span><div class="shots">${shots}</div></div>
+        ${APPS.length > 1 ? `<div style="margin-top:50px" class="reveal"><span class="eyebrow">Weitere Apps</span><div class="others">${APPS.filter((x) => x.id !== a.id).map((x) => `<a class="mini" href="app.html?id=${esc(x.id)}"><img src="${esc(x.icon)}" alt=""><span><b>${esc(x.name)}</b><small>${esc(x.tagline)}</small></span></a>`).join("")}</div></div>` : ""}`;
+    }
+  }
+
+  /* ---------- Einblenden beim Scrollen ---------- */
+  function observe() {
+    const els = document.querySelectorAll(".reveal:not(.in)");
+    if (!("IntersectionObserver" in window)) { els.forEach((e) => e.classList.add("in")); return; }
+    io = io || new IntersectionObserver((entries) => entries.forEach((en) => {
+      if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+    }), { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    els.forEach((e, i) => { e.style.transitionDelay = (i % 4) * 80 + "ms"; io.observe(e); });
+  }
+  observe();
+})();

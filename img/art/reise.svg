@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1565c0"/><stop offset=".55" stop-color="#4fc3f7"/><stop offset="1" stop-color="#e3f2fd"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1e88e5"/><stop offset="1" stop-color="#0a2a66"/>
+    </linearGradient>
+    <radialGradient id="sun" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fff44f"/><stop offset=".6" stop-color="#ffe066"/><stop offset="1" stop-color="#fff44f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe9a8"/><stop offset="1" stop-color="#f6c96b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#sky)"/>
+  <!-- Sonne -->
+  <circle cx="930" cy="170" r="150" fill="url(#sun)" opacity=".7"/>
+  <circle cx="930" cy="170" r="62" fill="#fff44f"/>
+  <!-- Wolken -->
+  <g fill="#fff" opacity=".9">
+    <path d="M120 150a38 38 0 0 1 72-14 30 30 0 0 1 50 22 26 26 0 0 1-4 52H130a30 30 0 0 1-10-60z"/>
+    <path d="M640 90a30 30 0 0 1 56-10 24 24 0 0 1 40 18 20 20 0 0 1-4 40H648a24 24 0 0 1-8-48z" opacity=".8"/>
+    <path d="M1010 300a26 26 0 0 1 48-8 20 20 0 0 1 34 14 18 18 0 0 1-3 34h-74a20 20 0 0 1-5-40z" opacity=".75"/>
+  </g>
+  <!-- Kondensstreifen + Flieger -->
+  <path d="M60 330 C 260 300, 380 200, 560 175" fill="none" stroke="#fff" stroke-width="4" stroke-dasharray="2 14" stroke-linecap="round" opacity=".85"/>
+  <g transform="translate(560 172) rotate(-12)">
+    <path d="M-60 0c0-7 6-11 14-11h88c14 0 26 5 26 11s-12 11-26 11h-88c-8 0-14-4-14-11z" fill="#fff"/>
+    <path d="M-2 -6 L-30 -46 L-14 -46 L26 -6z" fill="#e3f2fd"/>
+    <path d="M-2 6 L-24 38 L-10 38 L22 6z" fill="#b7d3f2"/>
+    <path d="M-52 -4 L-66 -30 L-56 -30 L-38 -6z" fill="#1565c0"/>
+    <g fill="#1565c0"><circle cx="0" cy="-2" r="2.6"/><circle cx="10" cy="-2" r="2.6"/><circle cx="20" cy="-2" r="2.6"/><circle cx="30" cy="-2" r="2.6"/><circle cx="-10" cy="-2" r="2.6"/></g>
+    <path d="M46 -8c6 1 12 4 16 8" stroke="#0a2a66" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <!-- Sprechblasen -->
+  <g font-family="Segoe UI, Roboto, Arial, sans-serif" font-weight="800" font-size="26">
+    <g transform="translate(250 60)"><rect width="130" height="54" rx="18" fill="#fff"/><path d="M28 54l-6 18 22-18z" fill="#fff"/><text x="65" y="36" text-anchor="middle" fill="#1565c0">¡Hola!</text></g>
+    <g transform="translate(760 270)"><rect width="150" height="54" rx="18" fill="#fff"/><path d="M120 54l10 18 4-18z" fill="#fff"/><text x="75" y="36" text-anchor="middle" fill="#0a2a66">Bonjour!</text></g>
+    <g transform="translate(430 250)"><rect width="130" height="50" rx="18" fill="#fff44f"/><path d="M30 50l-4 16 20-16z" fill="#fff44f"/><text x="65" y="34" text-anchor="middle" fill="#0a2a66">Hello!</text></g>
+    <g transform="translate(1040 60)" opacity=".95"><rect width="136" height="50" rx="18" fill="#fff"/><text x="68" y="34" text-anchor="middle" fill="#1565c0">Привет!</text></g>
+    <g transform="translate(60 230)" opacity=".95"><rect width="110" height="48" rx="18" fill="#fff"/><text x="55" y="33" text-anchor="middle" fill="#1565c0">Ahoj!</text></g>
+  </g>
+  <!-- Meer -->
+  <path d="M0 400 Q 150 385 300 400 T 600 400 T 900 400 T 1200 400 V600 H0z" fill="url(#sea)"/>
+  <g fill="none" stroke="#4fc3f7" stroke-width="3" stroke-linecap="round" opacity=".55">
+    <path d="M80 450q20-10 40 0t40 0"/><path d="M420 500q20-10 40 0t40 0"/><path d="M760 470q20-10 40 0t40 0"/><path d="M1040 540q20-10 40 0t40 0"/><path d="M250 560q20-10 40 0t40 0"/>
+  </g>
+  <!-- Insel mit Palme -->
+  <path d="M880 412 q120 -60 260 0 z" fill="url(#sand)"/>
+  <path d="M1010 400 q-6 -70 18 -130" stroke="#8d5a2b" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <g fill="#2e9e5b">
+    <path d="M1028 270 q-50 -20 -90 16 q44 -10 90 -16z"/>
+    <path d="M1028 270 q-30 -50 -84 -40 q50 14 84 40z"/>
+    <path d="M1028 270 q20 -54 76 -48 q-48 16 -76 48z"/>
+    <path d="M1028 270 q54 -8 84 32 q-44 -20 -84 -32z"/>
+  </g>
+  <circle cx="1022" cy="276" r="6" fill="#6b3f1d"/><circle cx="1034" cy="278" r="6" fill="#6b3f1d"/>
+  <!-- Schiff -->
+  <g transform="translate(150 330)">
+    <path d="M0 70 h330 l-36 52 H34z" fill="#fff"/>
+    <path d="M34 122 h260 l-6 8 H40z" fill="#0a2a66" opacity=".35"/>
+    <rect x="40" y="40" width="250" height="30" rx="4" fill="#f5f9ff"/>
+    <rect x="70" y="14" width="190" height="28" rx="4" fill="#fff"/>
+    <rect x="110" y="-8" width="110" height="24" rx="4" fill="#f5f9ff"/>
+    <rect x="200" y="-44" width="30" height="40" rx="4" fill="#1565c0"/>
+    <rect x="200" y="-44" width="30" height="10" fill="#fff44f"/>
+    <g fill="#4fc3f7"><rect x="52" y="48" width="14" height="12" rx="3"/><rect x="76" y="48" width="14" height="12" rx="3"/><rect x="100" y="48" width="14" height="12" rx="3"/><rect x="124" y="48" width="14" height="12" rx="3"/><rect x="148" y="48" width="14" height="12" rx="3"/><rect x="172" y="48" width="14" height="12" rx="3"/><rect x="196" y="48" width="14" height="12" rx="3"/><rect x="220" y="48" width="14" height="12" rx="3"/><rect x="244" y="48" width="14" height="12" rx="3"/><rect x="268" y="48" width="14" height="12" rx="3"/>
+      <rect x="84" y="22" width="14" height="12" rx="3"/><rect x="108" y="22" width="14" height="12" rx="3"/><rect x="132" y="22" width="14" height="12" rx="3"/><rect x="156" y="22" width="14" height="12" rx="3"/><rect x="180" y="22" width="14" height="12" rx="3"/><rect x="204" y="22" width="14" height="12" rx="3"/><rect x="228" y="22" width="14" height="12" rx="3"/></g>
+    <g fill="#1565c0"><circle cx="40" cy="92" r="6"/><circle cx="64" cy="92" r="6"/><circle cx="88" cy="92" r="6"/></g>
+    <path d="M200 -50 q14 -22 40 -26 q-16 10 -18 26" fill="#fff" opacity=".7"/>
+    <path d="M-20 128 q40 -14 80 0 t80 0 t80 0 t80 0 t80 0" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".6"/>
+  </g>
+  <!-- Möwen -->
+  <g fill="none" stroke="#0a2a66" stroke-width="3" stroke-linecap="round" opacity=".55">
+    <path d="M700 230q10-10 20 0q10-10 20 0"/><path d="M740 205q7-7 14 0q7-7 14 0"/>
+  </g>
+</svg>
