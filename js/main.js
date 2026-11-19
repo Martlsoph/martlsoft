@@ -151,7 +151,7 @@
       detail.innerHTML = `
         <div class="detail">
           <div>
-            <div class="box reveal"><span class="eyebrow">Über die App</span><h2>Das kann ${esc(a.name)}</h2><p class="lead">${esc(a.description)}</p></div>
+            <div class="box reveal"><span class="eyebrow">Über die App</span><h2>Das kann ${esc(a.name)}</h2><p class="lead">${a.description}</p></div>
             <div class="box reveal"><h3>Funktionen</h3><ul class="feat">${a.features.map((f) => `<li>${esc(f)}</li>`).join("")}</ul></div>
           </div>
           <div>
@@ -163,6 +163,7 @@
                 <li>${a.id === "maki-translator" ? "Texte gehen nur zum Übersetzen an die KI" : "Kein Internetzugriff, keine Datensammlung"}</li>
                 <li>${st.text}</li>
                 <li>Für Android</li>
+                ${a.guide ? `<li><a class="guide-link" href="#anleitung">Ausführliche Anleitung</a></li>` : ""}
               </ul>
             </div>
           </div>

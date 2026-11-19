@@ -237,6 +237,8 @@ section.block.alt { background: #fff; }
 .mini small { display: block; color: var(--soft); }
 
 /* ---------- Anleitung ---------- */
+a.guide-link { font-weight: 800; font-style: italic; color: var(--blue); text-decoration: underline; text-decoration-color: var(--sky); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a.guide-link:hover { color: var(--bright); text-decoration-color: var(--bright); }
 .guide { margin-top: 70px; background: #fff; border-radius: 30px; padding: 50px; border: 1px solid var(--outline); box-shadow: var(--shadow); }
 .guide-need, .guide-tip { border-radius: 18px; padding: 18px 22px; margin-top: 18px; }
 .guide-need { background: var(--ice); }

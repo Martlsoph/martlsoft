@@ -15,6 +15,7 @@
                "bald"  = erscheint bald
                "apk"   = nur als Datei zum Installieren
    neu         true  = bekommt das Etikett „Neu“
+   description darf <b>, <i> und <a href="..."> enthalten
    art         Bild oben auf der Karte und Hintergrund der App-Seite
                (img/art/...), darf auch ein Foto (.jpg) sein
    ===================================================================== */
@@ -75,7 +76,7 @@ const APPS = [
     status: "apk",
     play: "",
     description:
-      "Der Maki-Translator übersetzt deine Nachrichten in dominikanisches Spanisch, Englisch, Französisch, Russisch und Tschechisch – so locker formuliert, wie man im Chat schreibt. Die fertige Übersetzung fügst du mit einem Tipp direkt in WhatsApp ein. Antworten übersetzt er zurück ins Deutsche. Die Übersetzung erledigt die KI Claude von Anthropic mit deinem eigenen Schlüssel.",
+      "Der Maki-Translator übersetzt deine Nachrichten in dominikanisches Spanisch, Englisch, Französisch, Russisch und Tschechisch – so locker formuliert, wie man im Chat schreibt. Die fertige Übersetzung fügst du mit einem Tipp direkt in WhatsApp ein. Antworten übersetzt er zurück ins Deutsche. Die Übersetzung erledigt die <a class=\"guide-link\" href=\"#anleitung\">KI Claude von Anthropic mit deinem eigenen Schlüssel</a>.",
     features: [
       "Dominikanisches Spanisch, Englisch, Französisch, Russisch, Tschechisch",
       "Übersetzung mit einem Tipp direkt in WhatsApp einfügen",
