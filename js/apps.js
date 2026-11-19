@@ -69,20 +69,23 @@ const APPS = [
     id: "maki-translator",
     name: "Maki-Translator",
     tagline: "Übersetzen wie im Chat",
-    short: "Übersetzt deine Nachrichten locker formuliert – mit einem Tipp direkt in WhatsApp einfügen. Antworten zurück ins Deutsche.",
+    short: "Übersetzt deine Nachrichten locker formuliert – mit einem Tipp an WhatsApp, Messenger, Instagram & Co. Antworten zurück ins Deutsche.",
     category: "Kommunikation",
     icon: "img/apps/maki-translator.svg",
     art: "img/art/reise.svg",
     status: "apk",
     play: "",
     description:
-      "Der Maki-Translator übersetzt deine Nachrichten in dominikanisches Spanisch, Englisch, Französisch, Russisch und Tschechisch – so locker formuliert, wie man im Chat schreibt. Die fertige Übersetzung fügst du mit einem Tipp direkt in WhatsApp ein. Antworten übersetzt er zurück ins Deutsche. Die Übersetzung erledigt die <a class=\"guide-link\" href=\"#anleitung\">KI Claude von Anthropic mit deinem eigenen Schlüssel</a>.",
+      "Der Maki-Translator übersetzt deine Nachrichten in dominikanisches Spanisch, Englisch, Französisch, Russisch und Tschechisch – so locker formuliert, wie man im Chat schreibt. Du tippst oder sprichst einfach auf Deutsch. Die fertige Übersetzung schickst du mit einem Tipp an WhatsApp oder über <b>Teilen …</b> an Messenger, Instagram, LinkedIn, Telegram oder per SMS. Antworten aus WhatsApp teilst du direkt an die App und liest sie auf Deutsch. Die Übersetzung erledigt die <a class=\"guide-link\" href=\"#anleitung\">KI Claude von Anthropic mit deinem eigenen Schlüssel</a>.",
     features: [
       "Dominikanisches Spanisch, Englisch, Französisch, Russisch, Tschechisch",
-      "Übersetzung mit einem Tipp direkt in WhatsApp einfügen",
-      "Natürlicher Chat-Ton statt steifer Übersetzung",
-      "Antworten mit einem Tipp zurück ins Deutsche",
-      "Dein API-Schlüssel bleibt nur auf deinem Handy"
+      "Tippen oder einfach ins Mikro sprechen",
+      "Ton wählbar: locker wie unter Freunden oder höflich",
+      "Mit einem Tipp an WhatsApp – oder über „Teilen …“ an Messenger, Instagram, LinkedIn, Telegram und SMS",
+      "Antwort aus WhatsApp teilen und sofort auf Deutsch lesen",
+      "Zurück-Check, Slang-Erklärungen und Vorlesen",
+      "Anleitung in der App auf Deutsch, Englisch, Französisch, Russisch und Tschechisch",
+      "Dein API-Schlüssel und dein Verlauf bleiben nur auf deinem Handy"
     ],
     screenshots: [],
     guide: {
@@ -116,7 +119,7 @@ const APPS = [
         },
         {
           title: "Fertig – los geht’s!",
-          text: "Schreib einen Satz auf Deutsch, wähle die Sprache und tippe auf Übersetzen. Mit einem Tipp fügst du die Übersetzung direkt in WhatsApp ein."
+          text: "Schreib oder sprich einen Satz auf Deutsch, wähle die Sprache und tippe auf <b>Übersetzen</b>. Mit <b>An WhatsApp</b> landet die Übersetzung direkt im Chat, mit <b>Teilen …</b> in Messenger, Instagram, LinkedIn und anderen Apps. Eine ausführliche Anleitung in 5 Sprachen findest du in der App unter <b>≡ → Anleitung</b>."
         }
       ],
       faq: [
@@ -124,7 +127,8 @@ const APPS = [
         { q: "Kann es plötzlich teuer werden?", a: "Nein. Es wird nur das Guthaben verbraucht, das du selbst aufgeladen hast. Zusätzlich kannst du unter <b>Limits</b> eine Monatsgrenze festlegen." },
         { q: "Ist mein Schlüssel sicher?", a: "Der Schlüssel wird nur auf deinem Handy gespeichert. Gib ihn niemandem weiter, denn wer ihn hat, kann dein Guthaben verbrauchen." },
         { q: "Ich habe den Schlüssel verloren. Was nun?", a: "Kein Problem. Erstelle einfach unter <b>API Keys</b> einen neuen (Schritt 3) und füge ihn in der App ein. Den alten kannst du dort löschen." },
-        { q: "Die App sagt, das Guthaben ist leer.", a: "Dann lade unter <b>Billing</b> wieder etwas auf (Schritt 2). Der Schlüssel bleibt gleich, du musst in der App nichts ändern." }
+        { q: "Die App sagt, das Guthaben ist leer.", a: "Dann lade unter <b>Billing</b> wieder etwas auf (Schritt 2). Der Schlüssel bleibt gleich, du musst in der App nichts ändern." },
+        { q: "Geht das auch mit Facebook?", a: "Mit dem Facebook Messenger ja, über <b>Teilen …</b>. Die normale Facebook-App lässt keinen vorausgefüllten Text zu. Dort tippst du auf <b>Alles kopieren</b> und fügst den Text selbst ein. Bei LinkedIn landet geteilter Text als neuer Beitrag. Für Privatnachrichten dort ebenfalls kopieren und einfügen." }
       ]
     }
   }
