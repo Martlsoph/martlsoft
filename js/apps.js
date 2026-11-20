@@ -28,7 +28,7 @@
 const APPS = [
   {
     id: "maki-delta",
-    name: "MaKi-Delta",
+    name: "MaKi.DELTA",
     tagline: "Dateien & Ordner vergleichen",
     short: "Zeigt dir genau, was sich zwischen zwei Dateien oder Ordnern geändert hat – und gleicht sie auf Wunsch ab. Für Windows.",
     category: "Werkzeuge",
@@ -39,7 +39,7 @@ const APPS = [
     play: "",
     neu: true,
     description:
-      "Du hast Notizen, Listen oder Tabellen auf mehreren Rechnern und mit der Zeit laufen die Fassungen auseinander? MaKi-Delta legt zwei Dateien oder ganze Ordner nebeneinander und zeigt jede Änderung farbig an – bis aufs einzelne Wort. Mit einem Klick übernimmst du Änderungen von links nach rechts oder umgekehrt. Ganz ohne Cloud: Deine Dateien verlassen nie deinen PC.",
+      "Du hast Notizen, Listen oder Tabellen auf mehreren Rechnern und mit der Zeit laufen die Fassungen auseinander? MaKi.DELTA legt zwei Dateien oder ganze Ordner nebeneinander und zeigt jede Änderung farbig an – bis aufs einzelne Wort. Mit einem Klick übernimmst du Änderungen von links nach rechts oder umgekehrt. Ganz ohne Cloud: Deine Dateien verlassen nie deinen PC.",
     features: [
       "Texte, Markdown und Code Zeile für Zeile, geänderte Wörter hervorgehoben",
       "Änderungen mit → und ← übernehmen, rückgängig machen und speichern",
@@ -63,31 +63,31 @@ const APPS = [
         {
           label: "Installieren",
           hint: "empfohlen",
-          file: "downloads/maki-delta/MaKi-Delta-Setup-1.0.exe",
+          file: "downloads/maki-delta/MaKi.DELTA-Setup-1.0.exe",
           size: "2,6 MB",
-          sha256: "0a3e55eead5cc9a2068950d8e3a79ea4178021d67179122a1da1a8d838e51230",
+          sha256: "5447b0529972af7683f3a173198ef4195f37452521998f709ca70fa519d65dd9",
           text: "Mit Startmenü-Eintrag und auf Wunsch Desktop-Symbol. Keine Administratorrechte nötig. Entfernen über <b>Einstellungen → Apps</b>."
         },
         {
           label: "Ohne Installation (ZIP)",
           hint: "z. B. für den USB-Stick",
-          file: "downloads/maki-delta/MaKi-Delta-1.0-portable.zip",
+          file: "downloads/maki-delta/MaKi.DELTA-1.0-portable.zip",
           size: "827 KB",
-          sha256: "d78a60991e51f6c8a645691abcf98c3f5435fb845b6c03ed22ce65552827131a",
-          text: "Entpacken und <b>MaKi-Delta.exe</b> starten. Nichts wird installiert – zum Entfernen einfach den Ordner löschen."
+          sha256: "cff658db03a78924da3c660dc4138fd61154754ba1e8dfde2f1fc17d14f14c41",
+          text: "Entpacken und <b>MaKi.DELTA.exe</b> starten. Nichts wird installiert – zum Entfernen einfach den Ordner löschen."
         }
       ],
       steps: [
         "Datei herunterladen und doppelklicken.",
         "Falls Windows meldet „Der Computer wurde durch Windows geschützt“: auf <b>Weitere Informationen</b> und dann <b>Trotzdem ausführen</b> klicken. Die Warnung kommt, weil die App (noch) nicht digital signiert ist.",
-        "Beim Setup dem Assistenten folgen – fertig. MaKi-Delta findest du danach im Startmenü.",
+        "Beim Setup dem Assistenten folgen – fertig. MaKi.DELTA findest du danach im Startmenü.",
         "Zum Ausprobieren in der App oben rechts auf <b>☰</b> und dann <b>Beispiel: Texte</b> klicken."
       ]
     }
   },
   {
     id: "maki-volume",
-    name: "MaKi-Volume",
+    name: "MaKi.VOL",
     tagline: "Lautstärke-Boost",
     short: "Mehr Lautstärke für dein Handy – über das normale Maximum hinaus.",
     category: "Audio",
@@ -98,7 +98,7 @@ const APPS = [
     play: "",
     neu: true,
     description:
-      "Dein Handy ist selbst auf voller Lautstärke zu leise? MaKi-Volume hebt den Ton über das normale Maximum hinaus an – für Musik, Videos, Hörbücher und Podcasts. Ohne Werbung und ohne Internet.",
+      "Dein Handy ist selbst auf voller Lautstärke zu leise? MaKi.VOL hebt den Ton über das normale Maximum hinaus an – für Musik, Videos, Hörbücher und Podcasts. Ohne Werbung und ohne Internet.",
     features: [
       "Großer Ein/Aus-Knopf und ein Regler bis +20 dB",
       "Schnellwahl-Stufen: 25 %, 50 %, 75 %, 100 %",
@@ -111,7 +111,7 @@ const APPS = [
   },
   {
     id: "maki-blauklang",
-    name: "MaKi-Blauklang",
+    name: "MaKi.SOUND",
     tagline: "Musik- & Video-Player",
     short: "Musik- und Video-Player für deine eigenen Dateien – mit Playlists.",
     category: "Audio",
@@ -120,7 +120,7 @@ const APPS = [
     status: "bald",
     play: "",
     description:
-      "MaKi-Blauklang spielt die Musik und Videos ab, die auf deinem Handy liegen. Mit Playlists, Wiedergabe im Hintergrund und einer aufgeräumten Oberfläche in Blau. Deine Dateien verlassen dabei nie dein Gerät.",
+      "MaKi.SOUND spielt die Musik und Videos ab, die auf deinem Handy liegen. Mit Playlists, Wiedergabe im Hintergrund und einer aufgeräumten Oberfläche in Blau. Deine Dateien verlassen dabei nie dein Gerät.",
     features: [
       "Spielt Musik und Videos von deinem Gerät",
       "Eigene Playlists anlegen und importieren",
@@ -131,7 +131,7 @@ const APPS = [
   },
   {
     id: "maki-translator",
-    name: "Maki-Translator",
+    name: "MaKi.TRANS",
     tagline: "Übersetzen wie im Chat",
     short: "Übersetzt deine Nachrichten locker formuliert – mit einem Tipp an WhatsApp, Messenger, Instagram & Co. Antworten zurück ins Deutsche.",
     category: "Kommunikation",
@@ -140,7 +140,7 @@ const APPS = [
     status: "apk",
     play: "",
     description:
-      "Der Maki-Translator übersetzt deine Nachrichten in dominikanisches Spanisch, Englisch, Französisch, Russisch und Tschechisch – so locker formuliert, wie man im Chat schreibt. Du tippst oder sprichst einfach auf Deutsch. Die fertige Übersetzung schickst du mit einem Tipp an WhatsApp oder über <b>Teilen …</b> an Messenger, Instagram, LinkedIn, Telegram oder per SMS. Antworten aus WhatsApp teilst du direkt an die App und liest sie auf Deutsch. Die Übersetzung erledigt die <a class=\"guide-link\" href=\"#anleitung\">KI Claude von Anthropic mit deinem eigenen Schlüssel</a>.",
+      "MaKi.TRANS übersetzt deine Nachrichten in dominikanisches Spanisch, Englisch, Französisch, Russisch und Tschechisch – so locker formuliert, wie man im Chat schreibt. Du tippst oder sprichst einfach auf Deutsch. Die fertige Übersetzung schickst du mit einem Tipp an WhatsApp oder über <b>Teilen …</b> an Messenger, Instagram, LinkedIn, Telegram oder per SMS. Antworten aus WhatsApp teilst du direkt an die App und liest sie auf Deutsch. Die Übersetzung erledigt die <a class=\"guide-link\" href=\"#anleitung\">KI Claude von Anthropic mit deinem eigenen Schlüssel</a>.",
     features: [
       "Dominikanisches Spanisch, Englisch, Französisch, Russisch, Tschechisch",
       "Tippen oder einfach ins Mikro sprechen",
@@ -154,9 +154,9 @@ const APPS = [
     screenshots: [],
     guide: {
       button: "Anleitung: Schlüssel einrichten",
-      title: "So richtest du den Maki-Translator ein",
+      title: "So richtest du MaKi.TRANS ein",
       intro: "Damit die App übersetzen kann, brauchst du einmalig einen eigenen „Schlüssel“ von Anthropic, der Firma hinter der KI Claude. Das ist wie ein Prepaid-Guthaben fürs Übersetzen. Es dauert etwa 10 Minuten und du musst es nur ein einziges Mal machen.",
-      need: ["Dein Handy mit dem Maki-Translator", "Eine E-Mail-Adresse", "Eine Kreditkarte oder Debitkarte für das Guthaben (z. B. 5 $)"],
+      need: ["Dein Handy mit MaKi.TRANS", "Eine E-Mail-Adresse", "Eine Kreditkarte oder Debitkarte für das Guthaben (z. B. 5 $)"],
       tip: "Am bequemsten machst du die Schritte 1 bis 4 am Computer und schickst dir den Schlüssel dann z. B. per E-Mail aufs Handy. Es geht aber auch komplett am Handy.",
       steps: [
         {
@@ -179,7 +179,7 @@ const APPS = [
         },
         {
           title: "Schlüssel in der App einfügen",
-          text: "Öffne den Maki-Translator. Tippe oben rechts auf das Menü <b>≡</b> und dann auf <b>API-Schlüssel</b>. Halte den Finger lange in das Feld, tippe auf <b>Einfügen</b> und dann auf <b>Speichern</b>."
+          text: "Öffne MaKi.TRANS. Tippe oben rechts auf das Menü <b>≡</b> und dann auf <b>API-Schlüssel</b>. Halte den Finger lange in das Feld, tippe auf <b>Einfügen</b> und dann auf <b>Speichern</b>."
         },
         {
           title: "Fertig – los geht’s!",
