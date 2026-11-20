@@ -86,6 +86,31 @@ const APPS = [
     }
   },
   {
+    id: "maki-shop",
+    name: "MaKi.SHOP",
+    tagline: "Einkaufsliste",
+    short: "Die schnelle Einkaufsliste: eintippen oder einsprechen, im Laden antippen – erledigt.",
+    category: "Alltag",
+    icon: "img/apps/maki-shop.svg",
+    art: "img/art/einkauf.svg",
+    status: "bald",
+    play: "",
+    neu: true,
+    description:
+      "MaKi.SHOP ist eine schlanke Einkaufsliste ohne Schnickschnack. Du tippst deine Artikel ein – gern mehrere auf einmal, mit Komma getrennt – oder sprichst sie einfach ins Mikrofon. Die Liste sortiert sich von selbst alphabetisch. Im Laden tippst du einen Artikel an: Er wird durchgestrichen und wandert nach unten, sodass oben nur noch steht, was du noch brauchst. Ohne Werbung, ohne Konto, ohne Internet – deine Liste bleibt auf deinem Handy.",
+    features: [
+      "Schnell eintippen – mehrere Artikel mit Komma oder neuer Zeile",
+      "Großer Mikrofon-Knopf: „Milch, Brot und Eier“ wird zu drei Artikeln",
+      "Automatisch alphabetisch sortiert, Umlaute richtig einsortiert",
+      "Antippen hakt ab: durchgestrichen, blasser und unten gesammelt",
+      "Nochmal antippen – der Artikel ist wieder oben",
+      "Alle erledigten Artikel mit einem Tipp löschen (mit Sicherheitsfrage)",
+      "Keine doppelten Einträge, Rückgängig nach jeder Aktion",
+      "Alles bleibt auf dem Handy – kein Konto, kein Internet"
+    ],
+    screenshots: []
+  },
+  {
     id: "maki-volume",
     name: "MaKi.VOL",
     tagline: "Lautstärke-Boost",
