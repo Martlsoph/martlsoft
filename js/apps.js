@@ -14,6 +14,11 @@
    status      "play"  = im Play Store (dann "play" mit Link füllen)
                "bald"  = erscheint bald
                "apk"   = nur als Datei zum Installieren
+               "windows" = Windows-Programm zum Herunterladen (dann "download" füllen)
+   platform    "android" (Standard) oder "windows"
+   download    nur für Windows-Programme: Version, Dateien, Prüfsummen.
+               Die Dateien liegen in downloads/<id>/. Prüfsummen stehen
+               nach dem Bauen in Veroeffentlichung\SHA256.txt der App.
    neu         true  = bekommt das Etikett „Neu“
    description darf <b>, <i> und <a href="..."> enthalten
    art         Bild oben auf der Karte und Hintergrund der App-Seite
@@ -21,6 +26,65 @@
    ===================================================================== */
 
 const APPS = [
+  {
+    id: "maki-delta",
+    name: "MaKi-Delta",
+    tagline: "Dateien & Ordner vergleichen",
+    short: "Zeigt dir genau, was sich zwischen zwei Dateien oder Ordnern geändert hat – und gleicht sie auf Wunsch ab. Für Windows.",
+    category: "Werkzeuge",
+    platform: "windows",
+    icon: "img/apps/maki-delta.png",
+    art: "img/art/vergleich.svg",
+    status: "windows",
+    play: "",
+    neu: true,
+    description:
+      "Du hast Notizen, Listen oder Tabellen auf mehreren Rechnern und mit der Zeit laufen die Fassungen auseinander? MaKi-Delta legt zwei Dateien oder ganze Ordner nebeneinander und zeigt jede Änderung farbig an – bis aufs einzelne Wort. Mit einem Klick übernimmst du Änderungen von links nach rechts oder umgekehrt. Ganz ohne Cloud: Deine Dateien verlassen nie deinen PC.",
+    features: [
+      "Texte, Markdown und Code Zeile für Zeile, geänderte Wörter hervorgehoben",
+      "Änderungen mit → und ← übernehmen, rückgängig machen und speichern",
+      "Excel, CSV und ODS Zelle für Zelle – auf Wunsch über eine Schlüsselspalte",
+      "Word- und PDF-Dateien: der enthaltene Text wird verglichen",
+      "Bilder: nebeneinander, überblenden, wischen oder Pixel-Differenz",
+      "MP3-Tags und beliebige Dateien Byte für Byte (Hex)",
+      "Ganze Ordner vergleichen und synchronisieren – es wird nie etwas gelöscht",
+      "Handbuch in der App, hell und dunkel, komplett offline"
+    ],
+    screenshots: [
+      "img/screenshots/maki-delta-text.png",
+      "img/screenshots/maki-delta-tabelle.png",
+      "img/screenshots/maki-delta-start.png"
+    ],
+    download: {
+      version: "1.0",
+      date: "November 2026",
+      requirements: "Windows 10 oder 11 (64 Bit) mit Microsoft Edge (vorinstalliert) oder Google Chrome",
+      files: [
+        {
+          label: "Installieren",
+          hint: "empfohlen",
+          file: "downloads/maki-delta/MaKi-Delta-Setup-1.0.exe",
+          size: "2,6 MB",
+          sha256: "0a3e55eead5cc9a2068950d8e3a79ea4178021d67179122a1da1a8d838e51230",
+          text: "Mit Startmenü-Eintrag und auf Wunsch Desktop-Symbol. Keine Administratorrechte nötig. Entfernen über <b>Einstellungen → Apps</b>."
+        },
+        {
+          label: "Ohne Installation (ZIP)",
+          hint: "z. B. für den USB-Stick",
+          file: "downloads/maki-delta/MaKi-Delta-1.0-portable.zip",
+          size: "827 KB",
+          sha256: "d78a60991e51f6c8a645691abcf98c3f5435fb845b6c03ed22ce65552827131a",
+          text: "Entpacken und <b>MaKi-Delta.exe</b> starten. Nichts wird installiert – zum Entfernen einfach den Ordner löschen."
+        }
+      ],
+      steps: [
+        "Datei herunterladen und doppelklicken.",
+        "Falls Windows meldet „Der Computer wurde durch Windows geschützt“: auf <b>Weitere Informationen</b> und dann <b>Trotzdem ausführen</b> klicken. Die Warnung kommt, weil die App (noch) nicht digital signiert ist.",
+        "Beim Setup dem Assistenten folgen – fertig. MaKi-Delta findest du danach im Startmenü.",
+        "Zum Ausprobieren in der App oben rechts auf <b>☰</b> und dann <b>Beispiel: Texte</b> klicken."
+      ]
+    }
+  },
   {
     id: "maki-volume",
     name: "MaKi-Volume",

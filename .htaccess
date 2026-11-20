@@ -32,6 +32,16 @@ RedirectMatch 404 /\.git
 AddDefaultCharset utf-8
 AddType image/svg+xml .svg
 
+# Downloads (Windows-Programme) immer als Datei speichern
+AddType application/zip .zip
+AddType application/octet-stream .exe
+<IfModule mod_headers.c>
+  <FilesMatch "\.(exe|zip)$">
+    Header set Content-Disposition attachment
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
+
 # Schneller laden: Bilder lange zwischenspeichern, Seiten kurz
 <IfModule mod_expires.c>
   ExpiresActive On

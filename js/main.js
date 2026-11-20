@@ -7,7 +7,8 @@
   const STATUS = {
     play: { text: "Bei Google Play", cls: "play" },
     bald: { text: "Bald bei Google Play", cls: "" },
-    apk: { text: "Als Android-App", cls: "apk" }
+    apk: { text: "Als Android-App", cls: "apk" },
+    windows: { text: "Für Windows · Download", cls: "win" }
   };
 
   /* Kopfzeile: beim Scrollen weiß, Menü auf dem Handy */
@@ -116,6 +117,34 @@
     </section>`;
   }
 
+  /* Download-Bereich für Windows-Programme (Texte aus apps.js dürfen <b> enthalten) */
+  function downloadHtml(a) {
+    const d = a.download;
+    const name = (f) => f.split("/").pop();
+    return `<section class="dl" id="download">
+      <div class="reveal">
+        <span class="eyebrow">Download</span>
+        <h2>${esc(a.name)} herunterladen</h2>
+        <p class="lead">Version ${esc(d.version)} · ${esc(d.date)} · kostenlos, ohne Werbung, ohne Anmeldung</p>
+      </div>
+      <div class="dl-grid">
+        ${d.files.map((f, i) => `<div class="dl-card reveal${i === 0 ? " main" : ""}">
+          <div class="dl-head"><h3>${esc(f.label)}</h3>${f.hint ? `<span class="dl-hint">${esc(f.hint)}</span>` : ""}</div>
+          <p>${f.text}</p>
+          <a class="btn ${i === 0 ? "btn-lemon" : "btn-blue"}" href="${esc(f.file)}" download>⬇ ${esc(name(f.file))}</a>
+          <div class="dl-meta">${esc(f.size)}</div>
+          ${f.sha256 ? `<details class="dl-hash"><summary>Prüfsumme (SHA-256)</summary><code>${esc(f.sha256)}</code></details>` : ""}
+        </div>`).join("")}
+      </div>
+      <div class="dl-info">
+        <div class="box reveal"><h3>So geht’s</h3><ol class="dl-steps">${d.steps.map((s) => `<li>${s}</li>`).join("")}</ol></div>
+        <div class="box reveal"><h3>Voraussetzungen</h3><p>${esc(d.requirements)}</p>
+          <h3>Echtheit prüfen</h3><p>Wer sichergehen will: In PowerShell <code>Get-FileHash Dateiname</code> eingeben und mit der Prüfsumme oben vergleichen.</p>
+          <p><a href="datenschutz.html#${esc(a.id)}">Datenschutz</a> · <a href="impressum.html">Impressum</a> · Fragen: <a href="mailto:martlshop.co@gmail.com">martlshop.co@gmail.com</a></p></div>
+      </div>
+    </section>`;
+  }
+
   /* ---------- App-Unterseite ---------- */
   const detail = $("#appDetail");
   if (detail) {
@@ -133,7 +162,9 @@
         hero.insertAdjacentHTML("afterbegin", `<img class="hero-bg" src="${esc(a.art)}" alt="">`);
       }
       const st = STATUS[a.status] || STATUS.bald;
-      const playBtn = a.status === "play" && a.play
+      const playBtn = a.status === "windows" && a.download
+        ? `<a class="btn btn-lemon" href="#download">⬇ Kostenlos herunterladen</a>`
+        : a.status === "play" && a.play
         ? `<a class="btn btn-lemon" href="${esc(a.play)}" target="_blank" rel="noopener">▶ Bei Google Play laden</a>`
         : `<span class="btn btn-light" aria-disabled="true">${a.status === "apk" ? "Noch nicht im Play Store" : "Bald bei Google Play"}</span>`;
       $("#appHero").innerHTML = `
@@ -145,7 +176,7 @@
         </div>`;
 
       const shots = (a.screenshots || []).length
-        ? a.screenshots.map((s) => `<img src="${esc(s)}" alt="Screenshot ${esc(a.name)}" loading="lazy">`).join("")
+        ? a.screenshots.map((s) => `<img${a.platform === "windows" ? ' class="wide"' : ""} src="${esc(s)}" alt="Screenshot ${esc(a.name)}" loading="lazy">`).join("")
         : [1, 2, 3].map(() => `<div class="shot-ph"><img src="${esc(a.icon)}" alt="">Screenshots folgen</div>`).join("");
 
       detail.innerHTML = `
@@ -161,13 +192,14 @@
               <ul class="checks">
                 <li>Keine Werbung</li>
                 <li>${a.id === "maki-translator" ? "Texte gehen nur zum Übersetzen an die KI" : "Kein Internetzugriff, keine Datensammlung"}</li>
-                <li>${st.text}</li>
-                <li>Für Android</li>
+                <li>${a.download ? `Version ${esc(a.download.version)} · ${esc(a.download.date)}` : st.text}</li>
+                <li>${a.platform === "windows" ? "Für Windows 10 und 11" : "Für Android"}</li>
                 ${a.guide ? `<li><a class="guide-link" href="#anleitung">Ausführliche Anleitung</a></li>` : ""}
               </ul>
             </div>
           </div>
         </div>
+        ${a.download ? downloadHtml(a) : ""}
         ${a.guide ? guideHtml(a.guide) : ""}
         <div style="margin-top:60px" class="reveal"><span class="eyebrow">Screenshots</span><div class="shots">${shots}</div></div>
         ${APPS.length > 1 ? `<div style="margin-top:50px" class="reveal"><span class="eyebrow">Weitere Apps</span><div class="others">${APPS.filter((x) => x.id !== a.id).map((x) => `<a class="mini" href="app.html?id=${esc(x.id)}"><img src="${esc(x.icon)}" alt=""><span><b>${esc(x.name)}</b><small>${esc(x.tagline)}</small></span></a>`).join("")}</div></div>` : ""}`;
