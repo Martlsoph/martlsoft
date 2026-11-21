@@ -152,6 +152,62 @@ const APPS = [
     ]
   },
   {
+    id: "maki-files",
+    name: "MaKi.FILES",
+    tagline: "Dateimanager",
+    short: "Der aufgeräumte Dateimanager: Ordner durchsuchen, sortieren, Dateien finden und so teilen, wie du es willst.",
+    category: "Werkzeuge",
+    icon: "img/apps/maki-files.svg",
+    art: "img/art/dateien.svg",
+    status: "bald",
+    play: "",
+    neu: true,
+    description:
+      "MaKi.FILES zeigt die Ordner und Dateien auf deinem Handy übersichtlich an – mit eigenen Farben für Bilder, PDFs, Dokumente, Musik, Videos und Archive. Du sortierst nach Name, Größe, Datum oder Typ, suchst im aktuellen Ordner und filterst mit einem Tipp nach Dateiart. Wichtige Ordner wie <b>Download</b> und <b>Documents</b> bleiben oben angeheftet. Das Besondere: Beim Teilen bestimmst <b>du</b> die Reihenfolge – WhatsApp, E-Mail, Bluetooth oder „In Ordner speichern“ stehen dort, wo du sie haben willst. Ohne Werbung, ohne Internet, ohne Datensammlung.",
+    features: [
+      "Übersichtliche Liste mit Größe, Anzahl der Elemente und Datum",
+      "Eigene Symbole und Farben für Bilder, PDF, Dokumente, Audio, Video und Archive",
+      "Sortieren nach Name, Größe, Datum oder Typ – Ordner auf Wunsch zuerst",
+      "Suchen im aktuellen Ordner plus Filter: Bilder, Dokumente, Audio, Video, Archive",
+      "Ordner oben anheften – Download und Documents sind es schon",
+      "Mehrere Dateien auswählen und gemeinsam teilen oder exportieren",
+      "Eigener Teilen-Dialog mit frei wählbarer Reihenfolge",
+      "Kopie in einen Ordner deiner Wahl – auch SD-Karte und USB-Stick",
+      "Details mit Typ, Größe, Datum und Pfad",
+      "Kein Internet, keine Werbung, keine Datensammlung"
+    ],
+    screenshots: [
+      "img/screenshots/maki-files-ordner.png",
+      "img/screenshots/maki-files-suche.png",
+      "img/screenshots/maki-files-teilen.png",
+      "img/screenshots/maki-files-sortieren.png",
+      "img/screenshots/maki-files-details.png"
+    ]
+  },
+  {
+    id: "maki-text",
+    name: "MaKi.TEXT",
+    tagline: "Texteditor & Dokument-Viewer",
+    short: "Texte bearbeiten und Word-, Excel- und PDF-Dateien lesen – schnell, offline und ohne Werbung. Erscheint bald.",
+    category: "Werkzeuge",
+    icon: "img/apps/maki-text.svg",
+    art: "img/art/text.svg",
+    status: "bald",
+    play: "",
+    description:
+      "MaKi.TEXT wird der schlanke Texteditor für dein Handy: Notizen, Listen, Konfigurationsdateien oder Markdown öffnen, bearbeiten und speichern – mit Zeilennummern, Suchen &amp; Ersetzen und der passenden Zeichenkodierung. Dazu liest die App Word-Dokumente, Excel-Tabellen und PDFs, damit du schnell nachschauen kannst, ohne eine große Office-App zu starten. Die App ist gerade in Arbeit; diese Seite wird ergänzt, sobald sie fertig ist.",
+    features: [
+      "Textdateien öffnen, bearbeiten und speichern (TXT, Markdown, JSON, XML, CSV …)",
+      "Zeilennummern, Zeilenumbruch umschaltbar, Schriftgröße wählbar",
+      "Suchen &amp; Ersetzen mit Treffer-Zähler",
+      "Word-Dokumente (DOCX) und PDFs lesen",
+      "Excel-Tabellen (XLSX) mit Tabellenblättern ansehen",
+      "„Öffnen mit …“ aus anderen Apps, zuletzt geöffnete Dateien",
+      "Kein Internet, keine Werbung, keine Datensammlung"
+    ],
+    screenshots: []
+  },
+  {
     id: "maki-volume",
     name: "MaKi.VOL",
     tagline: "Lautstärke-Boost",
