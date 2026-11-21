@@ -43,6 +43,7 @@ Auf jeder App-Seite gibt es einen Bereich „Screenshots“. Wo noch keine Bilde
 - [ ] MaKi.SOUND einreichen (`.aab` liegt im Ordner `Veroeffentlichung`)
 - [ ] MaKi.TRANS einreichen – vorher auf dem eigenen Handy testen (Android 15/16)
 - [ ] MaKi.SHOP: `.aab` bauen und einreichen
+- [ ] MaKi.TODO: Upload-Schlüssel anlegen, `.aab` bauen, Store-Eintrag schreiben und einreichen (Details in `MaKi.TODO\TODO.md`)
 - [ ] Sobald eine App im Store ist: Play-Link in `js/apps.js` bei `play` eintragen und `status: "play"` setzen → auf der Website erscheint dann der Knopf „Bei Google Play laden“
 - [ ] Datenschutz-Link im Play Store: `https://martlsoft.com/datenschutz.html#<app-id>`
 
@@ -53,7 +54,7 @@ Auf jeder App-Seite gibt es einen Bereich „Screenshots“. Wo noch keine Bilde
 ## 4. Website
 
 - [x] martlsoft.com bei IONOS eingerichtet und online
-- [ ] SSL prüfen: Schloss 🔒 in der Adresszeile bei https://martlsoft.com
+- [x] SSL geprüft (21.11.2026): gültiges Let's-Encrypt-Zertifikat für martlsoft.com bis 18.02.2027 (verlängert sich automatisch). Die Seite kommt derzeit von GitHub Pages, siehe IONOS-Punkt oben
 - [ ] Optional: GitHub-Testseite abschalten (Repository → Settings → Pages → Unpublish), wenn martlsoft.com stabil läuft
 
 ## 5. Später / Ideen
