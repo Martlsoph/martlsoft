@@ -11,18 +11,21 @@ Auf jeder App-Seite gibt es einen Bereich „Screenshots“. Wo noch keine Bilde
 
 | App | Auf der Website | Vorhanden, aber noch nicht eingebaut | To-do |
 |---|---|---|---|
-| **MaKi.DELTA** (Windows) | ✅ 3 Bilder | – | erledigt |
-| **MaKi.VOL** | ❌ keine | ✅ 4 Play-Store-Bilder in `MaKi.VOL\Veroeffentlichung\Bilder\Screenshots` | nur noch einbauen |
-| **MaKi.SOUND** (Blauklang) | ❌ keine | ❌ | Screenshots erstellen und einbauen |
-| **MaKi.TRANS** | ❌ keine | ❌ | Screenshots erstellen und einbauen |
+| **MaKi.DELTA** (Windows) | ✅ 3 Bilder (neu, hell, mit neuem Namen) | – | erledigt (21.11.2026) |
+| **MaKi.VOL** | ✅ 4 Bilder + neues Titelbild | ✅ neu: 4 DE + 3 ES in `MaKi.VOL\Veroeffentlichung\Bilder` | erledigt (21.11.2026) |
+| **MaKi.SOUND** | ✅ 4 Bilder (Cover durch Platzhalter ersetzt) | ✅ 4 in `musicplayer\MaKi.SOUND\Veroeffentlichung\Bilder\Screenshots` | erledigt (21.11.2026) |
+| **MaKi.TRANS** | ✅ 4 Bilder (Schlüssel/Verlauf nicht sichtbar) | ✅ 4 in `MaKi.TRANS\Veroeffentlichung\Bilder\Screenshots` | erledigt (21.11.2026) |
 | **MaKi.SHOP** | ✅ 4 Bilder | – | erledigt (21.11.2026) |
 
-- [ ] MaKi.VOL: vorhandene 4 Screenshots auf die Website übernehmen
-- [ ] MaKi.SOUND: 3–4 Screenshots machen (Startseite, Player, Playlist, Einstellungen)
-- [ ] MaKi.TRANS: 3–4 Screenshots machen (Übersetzen, Teilen an WhatsApp, Antwort zurück, Einstellungen mit API-Schlüssel – **Schlüssel unkenntlich machen!**)
+- [x] MaKi.VOL: 7 neue Screenshots (DE + ES) mit Namen „MaKi.VOL“, Titelbild 1024×500 neu – im Explorer ersetzt, auf der Website eingebaut
+- [x] MaKi.SOUND: 4 Screenshots (Player, Interpreten, Titelliste, Einstellungen) – Albumcover wegen Urheberrecht durch Platzhalter ersetzt
+- [x] MaKi.TRANS: 4 Screenshots (Übersetzen, Menü, Anleitung, Über die App) – API-Schlüssel-Endung übermalt, kein Verlauf sichtbar
+- [x] MaKi.DELTA: 3 Screenshots neu (Start, Beispiel Texte, Beispiel Tabelle) – vorher stand noch „MaKi-Delta“ drauf
+- [ ] MaKi.SOUND: Playlists zeigen in der App „0 Titel“ – Import der M3U-Playlists prüfen
+- [ ] Spanische Screenshots für MaKi.SOUND, MaKi.TRANS, MaKi.SHOP (für spanische Store-Einträge), falls gewünscht
 - [x] MaKi.SHOP: 4 Screenshots (Liste mit Beispielartikeln, ☰-Menü, Anleitung, Über die App) – per USB vom Handy geholt und eingebaut (21.11.2026)
 - [x] MaKi.SHOP 1.1 (mit ☰-Menü, Anleitung, Über die App) aufs Handy installiert (21.11.2026)
-- [ ] Alle Bilder in `img/screenshots/` legen und in `js/apps.js` bei `screenshots` eintragen
+- [x] Alle Bilder in `img/screenshots/` legen und in `js/apps.js` bei `screenshots` eintragen (21.11.2026)
 - [ ] Prüfen, ob MaKi.FILES und MaKi.TEXT auch auf die Website sollen (Ordner gibt es schon in app.dev)
 - [ ] Hochladen: GitHub (macht Claude) und IONOS (Paket bauen, dann Upload – du tippst nur das SFTP-Passwort)
 

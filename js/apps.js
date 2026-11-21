@@ -138,7 +138,12 @@ const APPS = [
       "Kopfhörer-Schutz begrenzt den Boost automatisch",
       "Startet auf Wunsch nach dem Neustart wieder"
     ],
-    screenshots: []
+    screenshots: [
+      "img/screenshots/maki-volume-boost-an.png",
+      "img/screenshots/maki-volume-benachrichtigung.png",
+      "img/screenshots/maki-volume-einstellungen.png",
+      "img/screenshots/maki-volume-boost-aus.png"
+    ]
   },
   {
     id: "maki-blauklang",
@@ -158,7 +163,12 @@ const APPS = [
       "Wiedergabe im Hintergrund und auf dem Sperrbildschirm",
       "Keine Werbung, kein Internetzugriff"
     ],
-    screenshots: []
+    screenshots: [
+      "img/screenshots/maki-blauklang-player.png",
+      "img/screenshots/maki-blauklang-interpreten.png",
+      "img/screenshots/maki-blauklang-titel.png",
+      "img/screenshots/maki-blauklang-einstellungen.png"
+    ]
   },
   {
     id: "maki-translator",
@@ -182,7 +192,12 @@ const APPS = [
       "Anleitung in der App auf Deutsch, Englisch, Französisch, Russisch und Tschechisch",
       "Dein API-Schlüssel und dein Verlauf bleiben nur auf deinem Handy"
     ],
-    screenshots: [],
+    screenshots: [
+      "img/screenshots/maki-translator-uebersetzen.png",
+      "img/screenshots/maki-translator-menue.png",
+      "img/screenshots/maki-translator-anleitung.png",
+      "img/screenshots/maki-translator-ueber.png"
+    ],
     guide: {
       button: "Anleitung: Schlüssel einrichten",
       title: "So richtest du MaKi.TRANS ein",
