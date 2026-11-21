@@ -20,7 +20,8 @@ Auf jeder App-Seite gibt es einen Bereich „Screenshots“. Wo noch keine Bilde
 - [ ] MaKi.VOL: vorhandene 4 Screenshots auf die Website übernehmen
 - [ ] MaKi.SOUND: 3–4 Screenshots machen (Startseite, Player, Playlist, Einstellungen)
 - [ ] MaKi.TRANS: 3–4 Screenshots machen (Übersetzen, Teilen an WhatsApp, Antwort zurück, Einstellungen mit API-Schlüssel – **Schlüssel unkenntlich machen!**)
-- [ ] MaKi.SHOP: 3–4 Screenshots machen
+- [ ] MaKi.SHOP: 3–4 Screenshots machen (Liste mit offenen + abgehakten Artikeln, Spracheingabe, ☰-Menü, Anleitung) – Claude kann sie per USB direkt vom Handy holen
+- [x] MaKi.SHOP 1.1 (mit ☰-Menü, Anleitung, Über die App) aufs Handy installiert (21.11.2026)
 - [ ] Alle Bilder in `img/screenshots/` legen und in `js/apps.js` bei `screenshots` eintragen
 - [ ] Prüfen, ob MaKi.FILES und MaKi.TEXT auch auf die Website sollen (Ordner gibt es schon in app.dev)
 - [ ] Hochladen: GitHub (macht Claude) und IONOS (Paket bauen, dann Upload – du tippst nur das SFTP-Passwort)
