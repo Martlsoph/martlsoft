@@ -18,7 +18,7 @@ Auf jeder App-Seite gibt es einen Bereich „Screenshots“. Wo noch keine Bilde
 | **MaKi.SHOP** | ✅ 4 Bilder | – | erledigt (21.11.2026) |
 | **MaKi.TODO** | ✅ 5 Bilder (Liste, Emoji, Wischen, Bearbeiten, Erledigt) + Symbol, Titelbild, Datenschutz | ✅ 5 in `MaKi.TODO\Veroeffentlichung\Bilder\Screenshots` | erledigt (21.11.2026) |
 | **MaKi.FILES** | ✅ 5 Bilder (Ordner, Suchen/Filtern, Teilen, Sortieren, Details) + Symbol, Titelbild, Datenschutz | ✅ 5 in `MaKi.FILES\Veroeffentlichung\Bilder\Screenshots` (mit Beispiel-Ordner, keine privaten Dateien) | erledigt (21.11.2026) |
-| **MaKi.TEXT** | Seite mit Symbol, Titelbild, Datenschutz – „Screenshots folgen“ | – (App noch in Arbeit) | Bilder nachtragen, wenn die App fertig ist |
+| **MaKi.TEXT** | ✅ 5 Bilder (Editor, Suchen & Ersetzen, Excel, PDF-Seiten, Start) + Symbol, Titelbild, Datenschutz | ✅ 5 in `MaKi.TEXT\Veroeffentlichung\Bilder\Screenshots` | erledigt (21.11.2026) |
 
 - [x] MaKi.VOL: 7 neue Screenshots (DE + ES) mit Namen „MaKi.VOL“, Titelbild 1024×500 neu – im Explorer ersetzt, auf der Website eingebaut
 - [x] MaKi.SOUND: 4 Screenshots (Player, Interpreten, Titelliste, Einstellungen) – Albumcover wegen Urheberrecht durch Platzhalter ersetzt
@@ -30,7 +30,7 @@ Auf jeder App-Seite gibt es einen Bereich „Screenshots“. Wo noch keine Bilde
 - [x] MaKi.SHOP 1.1 (mit ☰-Menü, Anleitung, Über die App) aufs Handy installiert (21.11.2026)
 - [x] Alle Bilder in `img/screenshots/` legen und in `js/apps.js` bei `screenshots` eintragen (21.11.2026)
 - [x] MaKi.FILES und MaKi.TEXT auf die Website (21.11.2026): beide „Bald bei Google Play“; MaKi.TEXT als „Erscheint bald“ ohne Bilder
-- [ ] MaKi.TEXT: Screenshots einbauen, sobald die App fertig ist (`js/apps.js` → `screenshots`)
+- [x] MaKi.TEXT: Screenshots eingebaut (21.11.2026)
 - [ ] IONOS: Stand mit MaKi.FILES und MaKi.TEXT hochladen (Paket ist gebaut) – `IONOS-Hochladen.ps1` starten, Passwort sofort eintippen
 - [x] Hochladen: GitHub und IONOS (21.11.2026, mit MaKi.TODO). IONOS-Upload geht jetzt nach `/martlsoft` (`IONOS-Hochladen.ps1` angepasst), SFTP-Passwort am 21.11. neu gesetzt
 - [ ] IONOS: Beim Webspace steht „Keine Domain verbunden“ – martlsoft.com kommt noch von GitHub Pages. Wenn IONOS die echte Seite sein soll: Domain auf `/martlsoft` zeigen lassen (ANLEITUNG-IONOS.md, Schritt 5)

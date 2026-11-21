@@ -195,7 +195,7 @@ const APPS = [
     status: "bald",
     play: "",
     description:
-      "MaKi.TEXT ist der schlanke Texteditor für dein Handy: Notizen, Listen, Konfigurationsdateien oder Markdown öffnen, bearbeiten und speichern – mit Zeilennummern, Suchen &amp; Ersetzen und der passenden Zeichenkodierung. Windows-Dateien bleiben dabei, wie sie waren (Umlaute, Zeilenenden). Dazu liest die App Word-Dokumente, Excel-Tabellen und PDFs, damit du schnell nachschauen und kopieren kannst, ohne eine große Office-App zu starten. Die App ist fertig gebaut und wird gerade auf dem Handy getestet; Screenshots folgen.",
+      "MaKi.TEXT ist der schlanke Texteditor für dein Handy: Notizen, Listen, Konfigurationsdateien oder Markdown öffnen, bearbeiten und speichern – mit Zeilennummern, Suchen &amp; Ersetzen und der passenden Zeichenkodierung. Windows-Dateien bleiben dabei, wie sie waren (Umlaute, Zeilenenden). Dazu liest die App Word-Dokumente, Excel-Tabellen und PDFs, damit du schnell nachschauen und kopieren kannst, ohne eine große Office-App zu starten. Ohne Werbung, ohne Konto, ohne Internet – deine Dateien bleiben auf deinem Handy.",
     features: [
       "Textdateien öffnen, bearbeiten und speichern (TXT, Markdown, JSON, XML, CSV, INI …)",
       "Kodierung und Zeilenende bleiben beim Speichern erhalten",
@@ -208,7 +208,13 @@ const APPS = [
       "„Öffnen mit …“ aus anderen Apps, zuletzt geöffnete Dateien",
       "Kein Internet, keine Werbung, keine Datensammlung"
     ],
-    screenshots: []
+    screenshots: [
+      "img/screenshots/maki-text-editor.png",
+      "img/screenshots/maki-text-suche.png",
+      "img/screenshots/maki-text-excel.png",
+      "img/screenshots/maki-text-pdf.png",
+      "img/screenshots/maki-text-start.png"
+    ]
   },
   {
     id: "maki-volume",
