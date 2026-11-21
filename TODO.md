@@ -21,7 +21,7 @@ Auf jeder App-Seite gibt es einen Bereich „Screenshots“. Wo noch keine Bilde
 - [x] MaKi.SOUND: 4 Screenshots (Player, Interpreten, Titelliste, Einstellungen) – Albumcover wegen Urheberrecht durch Platzhalter ersetzt
 - [x] MaKi.TRANS: 4 Screenshots (Übersetzen, Menü, Anleitung, Über die App) – API-Schlüssel-Endung übermalt, kein Verlauf sichtbar
 - [x] MaKi.DELTA: 3 Screenshots neu (Start, Beispiel Texte, Beispiel Tabelle) – vorher stand noch „MaKi-Delta“ drauf
-- [ ] MaKi.SOUND: Playlists zeigen in der App „0 Titel“ – Import der M3U-Playlists prüfen
+- [x] MaKi.SOUND: Playlists zeigen in der App „0 Titel“ – behoben 21.11.2026 (Übersicht wurde vor dem Laden der Bibliothek berechnet; Import zusätzlich robuster). Ggf. Playlist-Screenshot neu machen.
 - [ ] Spanische Screenshots für MaKi.SOUND, MaKi.TRANS, MaKi.SHOP (für spanische Store-Einträge), falls gewünscht
 - [x] MaKi.SHOP: 4 Screenshots (Liste mit Beispielartikeln, ☰-Menü, Anleitung, Über die App) – per USB vom Handy geholt und eingebaut (21.11.2026)
 - [x] MaKi.SHOP 1.1 (mit ☰-Menü, Anleitung, Über die App) aufs Handy installiert (21.11.2026)

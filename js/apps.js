@@ -165,6 +165,7 @@ const APPS = [
     ],
     screenshots: [
       "img/screenshots/maki-blauklang-player.png",
+      "img/screenshots/maki-blauklang-playlists.png",
       "img/screenshots/maki-blauklang-interpreten.png",
       "img/screenshots/maki-blauklang-titel.png",
       "img/screenshots/maki-blauklang-einstellungen.png"
