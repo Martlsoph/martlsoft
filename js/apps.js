@@ -109,7 +109,12 @@ const APPS = [
       "Anleitung direkt in der App – im ☰-Menü, dazu Infos, Kontakt und Datenschutz",
       "Alles bleibt auf dem Handy – kein Konto, kein Internet"
     ],
-    screenshots: []
+    screenshots: [
+      "img/screenshots/maki-shop-liste.png",
+      "img/screenshots/maki-shop-menue.png",
+      "img/screenshots/maki-shop-anleitung.png",
+      "img/screenshots/maki-shop-ueber.png"
+    ]
   },
   {
     id: "maki-volume",
