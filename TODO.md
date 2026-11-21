@@ -28,7 +28,8 @@ Auf jeder App-Seite gibt es einen Bereich „Screenshots“. Wo noch keine Bilde
 - [x] MaKi.SHOP 1.1 (mit ☰-Menü, Anleitung, Über die App) aufs Handy installiert (21.11.2026)
 - [x] Alle Bilder in `img/screenshots/` legen und in `js/apps.js` bei `screenshots` eintragen (21.11.2026)
 - [ ] Prüfen, ob MaKi.FILES und MaKi.TEXT auch auf die Website sollen (Ordner gibt es schon in app.dev)
-- [ ] Hochladen: GitHub (macht Claude) und IONOS (Paket bauen, dann Upload – du tippst nur das SFTP-Passwort)
+- [x] Hochladen: GitHub und IONOS (21.11.2026, mit MaKi.TODO). IONOS-Upload geht jetzt nach `/martlsoft` (`IONOS-Hochladen.ps1` angepasst), SFTP-Passwort am 21.11. neu gesetzt
+- [ ] IONOS: Beim Webspace steht „Keine Domain verbunden“ – martlsoft.com kommt noch von GitHub Pages. Wenn IONOS die echte Seite sein soll: Domain auf `/martlsoft` zeigen lassen (ANLEITUNG-IONOS.md, Schritt 5)
 
 **So machst du Screenshots am Handy:** Ein-/Aus-Taste und Leiser-Taste gleichzeitig kurz drücken. Die Bilder landen in der Galerie unter „Screenshots“. Schick sie dir per Mail oder Google Drive auf den PC, oder Claude erstellt sie im Emulator.
 
