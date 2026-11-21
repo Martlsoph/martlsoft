@@ -31,7 +31,7 @@ Auf jeder App-Seite gibt es einen Bereich „Screenshots“. Wo noch keine Bilde
 - [x] Alle Bilder in `img/screenshots/` legen und in `js/apps.js` bei `screenshots` eintragen (21.11.2026)
 - [x] MaKi.FILES und MaKi.TEXT auf die Website (21.11.2026): beide „Bald bei Google Play“; MaKi.TEXT als „Erscheint bald“ ohne Bilder
 - [x] MaKi.TEXT: Screenshots eingebaut (21.11.2026)
-- [ ] IONOS: Stand mit MaKi.FILES und MaKi.TEXT hochladen (Paket ist gebaut) – `IONOS-Hochladen.ps1` starten, Passwort sofort eintippen
+- [x] IONOS: Stand mit allen 8 Apps hochgeladen (21.11.2026, von dir gestartet)
 - [x] Hochladen: GitHub und IONOS (21.11.2026, mit MaKi.TODO). IONOS-Upload geht jetzt nach `/martlsoft` (`IONOS-Hochladen.ps1` angepasst), SFTP-Passwort am 21.11. neu gesetzt
 - [ ] IONOS: Beim Webspace steht „Keine Domain verbunden“ – martlsoft.com kommt noch von GitHub Pages. Wenn IONOS die echte Seite sein soll: Domain auf `/martlsoft` zeigen lassen (ANLEITUNG-IONOS.md, Schritt 5)
 
