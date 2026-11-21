@@ -106,6 +106,7 @@ const APPS = [
       "Nochmal antippen – der Artikel ist wieder oben",
       "Alle erledigten Artikel mit einem Tipp löschen (mit Sicherheitsfrage)",
       "Keine doppelten Einträge, Rückgängig nach jeder Aktion",
+      "Anleitung direkt in der App – im ☰-Menü, dazu Infos, Kontakt und Datenschutz",
       "Alles bleibt auf dem Handy – kein Konto, kein Internet"
     ],
     screenshots: []
