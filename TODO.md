@@ -16,6 +16,7 @@ Auf jeder App-Seite gibt es einen Bereich „Screenshots“. Wo noch keine Bilde
 | **MaKi.SOUND** | ✅ 4 Bilder (Cover durch Platzhalter ersetzt) | ✅ 4 in `musicplayer\MaKi.SOUND\Veroeffentlichung\Bilder\Screenshots` | erledigt (21.11.2026) |
 | **MaKi.TRANS** | ✅ 4 Bilder (Schlüssel/Verlauf nicht sichtbar) | ✅ 4 in `MaKi.TRANS\Veroeffentlichung\Bilder\Screenshots` | erledigt (21.11.2026) |
 | **MaKi.SHOP** | ✅ 4 Bilder | – | erledigt (21.11.2026) |
+| **MaKi.TODO** | ✅ 5 Bilder (Liste, Emoji, Wischen, Bearbeiten, Erledigt) + Symbol, Titelbild, Datenschutz | ✅ 5 in `MaKi.TODOVeroeffentlichungBilderScreenshots` | erledigt (21.11.2026) |
 
 - [x] MaKi.VOL: 7 neue Screenshots (DE + ES) mit Namen „MaKi.VOL“, Titelbild 1024×500 neu – im Explorer ersetzt, auf der Website eingebaut
 - [x] MaKi.SOUND: 4 Screenshots (Player, Interpreten, Titelliste, Einstellungen) – Albumcover wegen Urheberrecht durch Platzhalter ersetzt

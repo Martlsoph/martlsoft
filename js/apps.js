@@ -86,6 +86,41 @@ const APPS = [
     }
   },
   {
+    id: "maki-todo",
+    name: "MaKi.TODO",
+    tagline: "To-Do-Liste",
+    short: "Die schlanke To-Do-Liste: eintippen oder einsprechen, das passende Emoji kommt von selbst – antippen, erledigt.",
+    category: "Alltag",
+    icon: "img/apps/maki-todo.svg",
+    art: "img/art/aufgaben.svg",
+    status: "bald",
+    play: "",
+    neu: true,
+    description:
+      "MaKi.TODO ist eine aufgeräumte To-Do-Liste für den Alltag. Du tippst deine Aufgaben ein – gern mehrere auf einmal, mit Komma getrennt – oder sprichst sie ins Mikrofon. Die App erkennt Wörter wie „anrufen“, „Arzt“, „Garten“ oder „Auto“ und setzt das passende Emoji davor. Offene Aufgaben stehen alphabetisch oben, Erledigtes wandert durchgestrichen nach unten. Bis zu drei Aufgaben markierst du mit einem Stern als <b>„heute dran“</b>, Routinen wie „Pflanzen gießen“ kommen nach dem Abhaken von selbst wieder. Ohne Werbung, ohne Konto, ohne Internet – deine Aufgaben bleiben auf deinem Handy.",
+    features: [
+      "Schnell eintippen – mehrere Aufgaben mit Komma oder neuer Zeile",
+      "Großer Mikrofon-Knopf zum Einsprechen",
+      "Passendes Emoji automatisch: 📞 anrufen, 🩺 Arzt, 🌿 Garten, 🚗 Auto, 🛒 Einkaufen – jederzeit änderbar",
+      "Emoji-Schnellauswahl und die normale Emoji-Tastatur",
+      "Alphabetisch sortiert, Umlaute richtig einsortiert",
+      "Antippen hakt ab: durchgestrichen, blasser und unten gesammelt",
+      "⭐ „Heute dran“: bis zu drei Aufgaben zitronengelb oben angepinnt",
+      "🔁 Wiederholen: täglich, alle paar Tage oder wöchentlich – die Aufgabe kommt von selbst wieder",
+      "Emoji-Filter: per Tipp nur ein Thema anzeigen, z. B. alle Anrufe",
+      "Wischen wie im Mail-Postfach: rechts abhaken, links bearbeiten oder auf morgen verschieben",
+      "Erledigte Aufgaben mit einem Tipp aufräumen (mit Sicherheitsfrage), Rückgängig nach jeder Aktion",
+      "Alles bleibt auf dem Handy – kein Konto, kein Internet"
+    ],
+    screenshots: [
+      "img/screenshots/maki-todo-liste.png",
+      "img/screenshots/maki-todo-emoji.png",
+      "img/screenshots/maki-todo-wischen.png",
+      "img/screenshots/maki-todo-bearbeiten.png",
+      "img/screenshots/maki-todo-erledigt.png"
+    ]
+  },
+  {
     id: "maki-shop",
     name: "MaKi.SHOP",
     tagline: "Einkaufsliste",

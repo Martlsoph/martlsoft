@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4fc3f7"/><stop offset=".45" stop-color="#1565c0"/><stop offset="1" stop-color="#0a2a66"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <!-- dezente Kreise im Hintergrund -->
+  <g fill="none" stroke="#fff" opacity=".08" stroke-width="3">
+    <circle cx="1040" cy="90" r="160"/><circle cx="140" cy="540" r="190"/>
+  </g>
+  <!-- Aufgabenliste -->
+  <g transform="translate(150 95) rotate(-4)">
+    <rect width="400" height="430" rx="34" fill="#fff"/>
+    <rect x="34" y="34" width="170" height="20" rx="10" fill="#0a2a66" opacity=".85"/>
+    <!-- "Heute dran": zitronengelb mit Stern -->
+    <rect x="18" y="80" width="364" height="64" rx="20" fill="#fff44f"/>
+    <circle cx="58" cy="112" r="16" fill="none" stroke="#0a2a66" stroke-width="5"/>
+    <rect x="94" y="102" width="190" height="20" rx="10" fill="#0a2a66"/>
+    <path d="M345 96l6 13 14 2-10 10 3 14-13-7-13 7 3-14-10-10 14-2z" fill="#0a2a66"/>
+    <!-- offene Aufgaben -->
+    <circle cx="58" cy="182" r="16" fill="none" stroke="#b7c8e3" stroke-width="5"/>
+    <rect x="94" y="172" width="150" height="20" rx="10" fill="#0d1b3e" opacity=".75"/>
+    <circle cx="58" cy="242" r="16" fill="none" stroke="#b7c8e3" stroke-width="5"/>
+    <rect x="94" y="232" width="220" height="20" rx="10" fill="#0d1b3e" opacity=".75"/>
+    <!-- erledigt: abgehakt, durchgestrichen, blasser -->
+    <g opacity=".8">
+      <circle cx="58" cy="322" r="18" fill="#1565c0"/>
+      <path d="M49 322l7 7 12-13" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="94" y="312" width="170" height="20" rx="10" fill="#5b6b8c" opacity=".55"/>
+      <rect x="88" y="320" width="184" height="5" rx="2.5" fill="#0d1b3e" opacity=".7"/>
+      <circle cx="58" cy="382" r="18" fill="#1565c0"/>
+      <path d="M49 382l7 7 12-13" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="94" y="372" width="120" height="20" rx="10" fill="#5b6b8c" opacity=".55"/>
+      <rect x="88" y="380" width="134" height="5" rx="2.5" fill="#0d1b3e" opacity=".7"/>
+    </g>
+  </g>
+  <!-- Mikrofon-Knopf -->
+  <g transform="translate(640 160)">
+    <circle r="62" fill="#fff44f"/>
+    <rect x="-16" y="-34" width="32" height="50" rx="16" fill="#0a2a66"/>
+    <path d="M-28 4a28 28 0 0 0 56 0M0 32v14" fill="none" stroke="#0a2a66" stroke-width="7" stroke-linecap="round"/>
+  </g>
+  <!-- Wiederholen-Pfeile -->
+  <g transform="translate(860 330)" fill="none" stroke="#fff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-90 -10a90 90 0 0 1 160 -50"/>
+    <path d="M90 10a90 90 0 0 1 -160 50"/>
+    <path d="M40 -80l32 20 -8 36" />
+    <path d="M-40 80l-32 -20 8 -36"/>
+  </g>
+  <!-- großer Haken -->
+  <path d="M810 330l32 32 62-62" fill="none" stroke="#fff44f" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
