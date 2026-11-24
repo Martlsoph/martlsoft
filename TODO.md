@@ -59,7 +59,7 @@ Auf jeder App-Seite gibt es einen Bereich „Screenshots“. Wo noch keine Bilde
 
 - [x] martlsoft.com bei IONOS eingerichtet und online
 - [x] SSL geprüft (21.11.2026): gültiges Let's-Encrypt-Zertifikat für martlsoft.com bis 18.02.2027 (verlängert sich automatisch). Die Seite kommt derzeit von GitHub Pages, siehe IONOS-Punkt oben
-- [x] Abschnitt „Martlsoft unterstützen“ mit PayPal-Link (nur normaler Link, kein PayPal-Script), Fußzeilen-Link „Unterstützen“, Datenschutz Abschnitt 6 (24.11.2026, auf GitHub)
+- [x] Abschnitt „Martlsoft unterstützen“ mit PayPal-Link (nur normaler Link, kein PayPal-Script), Fußzeilen-Link „Unterstützen“, Datenschutz Abschnitt 6 (24.11.2026, auf GitHub und IONOS)
 - [ ] Optional: GitHub-Testseite abschalten (Repository → Settings → Pages → Unpublish) – ⚠️ **erst nachdem** die Domain bei IONOS auf `/martlsoft` zeigt! Derzeit kommt martlsoft.com von GitHub Pages; Abschalten würde die Website offline nehmen
 
 ## 5. Später / Ideen
