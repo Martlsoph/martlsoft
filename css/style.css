@@ -323,3 +323,15 @@ a.guide-link:hover { color: var(--bright); text-decoration-color: var(--bright);
 .dl-steps { padding-left: 22px; margin: 0; }
 .dl-steps li { margin-bottom: 10px; }
 @media (max-width: 860px) { .dl-grid, .dl-info { grid-template-columns: 1fr; } .shots img.wide { height: 220px; } }
+
+/* ---------- Unterstützen ---------- */
+.support-cta { margin: 30px 0 12px; }
+.btn-big { font-size: 1.15rem; padding: 18px 34px; min-height: 56px; }
+#unterstuetzen .center .fine { color: var(--soft); font-size: .95rem; margin: 0; }
+.why { max-width: 760px; margin: 50px auto 0; background: #fff; border: 1px solid var(--outline); border-radius: 22px; padding: 30px 34px; }
+.why h3 { margin-top: 0; }
+.why .fine { color: var(--soft); font-size: .95rem; margin: 18px 0 0; }
+.cup { display: inline-block; animation: steam 2.4s ease-in-out infinite; }
+@keyframes steam { 50% { transform: translateY(-4px) rotate(-6deg); } }
+@media (max-width: 760px) { .why { padding: 22px 20px; } .btn-big { justify-content: center; width: 100%; max-width: 360px; } }
+@media (prefers-reduced-motion: reduce) { .cup { animation: none; } }
