@@ -12,7 +12,7 @@ Auf jeder App-Seite gibt es einen Bereich „Screenshots“. Wo noch keine Bilde
 | App | Auf der Website | Vorhanden, aber noch nicht eingebaut | To-do |
 |---|---|---|---|
 | **MaKi.DELTA** (Windows) | ✅ 3 Bilder (neu, hell, mit neuem Namen) | – | erledigt (21.11.2026) |
-| **MaKi.WEATHER** (Windows-Download, bald Android) | ✅ 6 Bilder (2 PC, 4 Handy, Beispielorte ohne private Daten) | – | erledigt (25.11.2026), Version 1.0.10 |
+| **MaKi.WEATHER** (Windows-Download, bald Android) | ✅ 6 Bilder (2 PC, 4 Handy, Beispielorte ohne private Daten) | – | erledigt (25.11.2026), Version 1.0.11 (ohne RainViewer) |
 | **MaKi.VOL** | ✅ 4 Bilder + neues Titelbild | ✅ neu: 4 DE + 3 ES in `MaKi.VOL\Veroeffentlichung\Bilder` | erledigt (21.11.2026) |
 | **MaKi.SOUND** | ✅ 4 Bilder (Cover durch Platzhalter ersetzt) | ✅ 4 in `musicplayer\MaKi.SOUND\Veroeffentlichung\Bilder\Screenshots` | erledigt (21.11.2026) |
 | **MaKi.TRANS** | ✅ 4 Bilder (Schlüssel/Verlauf nicht sichtbar) | ✅ 4 in `MaKi.TRANS\Veroeffentlichung\Bilder\Screenshots` | erledigt (21.11.2026) |

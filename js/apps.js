@@ -52,8 +52,7 @@ const APPS = [
     features: [
       "Aktuelles Wetter, gefühlte Temperatur, Regen, Wind, Luftfeuchte, Luftdruck, UV und Sonne",
       "Stündlich für 24 Stunden und 7-Tage-Vorhersage mit max. und min. Temperatur",
-      "Regenradar des Deutschen Wetterdienstes: 12 Stunden Rückblick, 2 Stunden Vorschau, abspielbar",
-      "Außerhalb Deutschlands weltweites Radar (RainViewer)",
+      "Regenradar des Deutschen Wetterdienstes für Deutschland und die Nachbarländer: 12 Stunden Rückblick, 2 Stunden Vorschau, abspielbar",
       "Mehrere Orte als Zuhause, Hotel/Unterwegs, Urlaub oder Sonstiger Ort",
       "Suche nach Ortsname oder Postleitzahl – oder einfach den aktuellen Standort nehmen",
       "Ortszeit mit Zeitzone (z. B. MEZ) für jeden Ort",
@@ -70,24 +69,24 @@ const APPS = [
       "img/screenshots/maki-weather-pc-2-santo-domingo-dunkel.png"
     ],
     download: {
-      version: "1.0.10",
+      version: "1.0.11",
       date: "November 2026",
       requirements: "Windows 10 oder 11 (64 Bit) mit Microsoft Edge (vorinstalliert) oder Google Chrome und eine Internetverbindung (für Wetter, Radar und Karte)",
       files: [
         {
           label: "Installieren",
           hint: "empfohlen",
-          file: "downloads/maki-weather/MaKi.WEATHER-Setup-1.0.10.exe",
+          file: "downloads/maki-weather/MaKi.WEATHER-Setup-1.0.11.exe",
           size: "2,1 MB",
-          sha256: "4650d872df2356bbb64533ab2c32c96d22504cb039b10224f9775121e0b700af",
+          sha256: "cc1e03563c2c128a70386205d78d1f33d5a01d6e7442b292b559cf45670d662e",
           text: "Mit Startmenü-Eintrag und auf Wunsch Desktop-Symbol. Keine Administratorrechte nötig. Entfernen über <b>Einstellungen → Apps</b>."
         },
         {
           label: "Ohne Installation (ZIP)",
           hint: "z. B. für den USB-Stick",
-          file: "downloads/maki-weather/MaKi.WEATHER-1.0.10-portable.zip",
+          file: "downloads/maki-weather/MaKi.WEATHER-1.0.11-portable.zip",
           size: "171 KB",
-          sha256: "f5d58d54c1f667e323dbf5789e5c8f227723bd9f30953afa7bd3d1937e1afc2d",
+          sha256: "983a73b994057a6dc214da78da505d7046a2c8216ec4cbb786c81e54ccb08a5f",
           text: "Entpacken und <b>MaKi.WEATHER.exe</b> starten. Nichts wird installiert – zum Entfernen einfach den Ordner löschen."
         }
       ],
