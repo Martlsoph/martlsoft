@@ -74,7 +74,8 @@ Auftrag: `app.dev\251126.todo.claude-code-auftrag-martlsoft-downloads.md`
 - [x] Lizenzbedingungen (Entwurf): `lizenz.html` + `LIZENZ.txt` in Setup (muss bestätigt werden) und ZIP, Fußzeilen-Link „Lizenz“
 - [x] Update-Prüfung in MaKi.DELTA 1.1 und MaKi.WEATHER 1.0.12 (fragt beim ersten Start, abschaltbar, liest `version.json`); neue Releases liegen in `downloads/`
 - [x] Datenschutz: Download-Zähler (nur IONOS-Fassung) und Update-Prüfung bei beiden Apps ergänzt
-- [ ] **Hochladen:** GitHub (`git push`) und IONOS (`IONOS-Paket-erstellen.ps1`, dann `..\IONOS-Hochladen.ps1`). Erst dann findet die Update-Prüfung `version.json`
+- [x] GitHub gepusht (25.11.2026): martlsoft.com liefert `version.json` (mit CORS), `lizenz.html` und die neuen Downloads DELTA 1.1 / WEATHER 1.0.12
+- [ ] **IONOS hochladen:** `IONOS-Paket-erstellen.ps1`, dann `..\IONOS-Hochladen.ps1` (SFTP-Passwort selbst eintippen)
 - [ ] **Statistik-Passwort setzen:** `app.dev\Statistik-Passwort-setzen.ps1` ausführen – liegt bewusst außerhalb des öffentlichen Repos, neben `IONOS-Hochladen.ps1` (Passwort selbst eintippen, danach das SFTP-Passwort)
 - [ ] **Auf IONOS testen** (lokal gibt es kein PHP): `https://martlsoft.com/download.php?app=maki-weather` lädt die Datei, `stats.php` zählt sie; `…/daten/downloads.json` liefert 404. Geht erst, wenn die Domain auf IONOS zeigt (siehe Abschnitt 1) – solange GitHub Pages ausliefert, wird direkt geladen und nicht gezählt
 - [ ] Lizenzbedingungen rechtlich prüfen lassen, danach „Entwurf“ aus `lizenz.html` und `LIZENZ.txt` entfernen
