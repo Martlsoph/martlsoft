@@ -79,7 +79,7 @@ Auftrag: `app.dev\251126.todo.claude-code-auftrag-martlsoft-downloads.md`
 - [ ] **Statistik-Passwort setzen:** `app.dev\Statistik-Passwort-setzen.ps1` ausführen – liegt bewusst außerhalb des öffentlichen Repos, neben `IONOS-Hochladen.ps1` (Passwort selbst eintippen, danach das SFTP-Passwort)
 - [ ] **Auf IONOS testen** (lokal gibt es kein PHP): `https://martlsoft.com/download.php?app=maki-weather` lädt die Datei, `stats.php` zählt sie; `…/daten/downloads.json` liefert 404. Geht erst, wenn die Domain auf IONOS zeigt (siehe Abschnitt 1) – solange GitHub Pages ausliefert, wird direkt geladen und nicht gezählt
 - [ ] Lizenzbedingungen rechtlich prüfen lassen, danach „Entwurf“ aus `lizenz.html` und `LIZENZ.txt` entfernen
-- [ ] Impressum, Datenschutz und MaKi.DELTA-App nennen noch die alte Anschrift (Nußbaumstr. 3, Schwabmünchen) – prüfen, ob auf die neue Anschrift umgestellt werden muss
+- [ ] **Etwa Mai 2027:** Anschrift auf Estweg 6, 86872 Scherstetten umstellen (Entscheidung 25.11.2026: bis dahin bleibt Nußbaumstr. 3, Schwabmünchen – passt zu Gewerbe-Anmeldung und D-U-N-S). Dann zusammen ändern: Gewerbe, D&B/D-U-N-S, Google Play, Impressum, Datenschutz, Startseite („Martin aus …“, Fußzeile), MaKi.DELTA-Menü (neue Version bauen)
 - Später (Stufe 2+): Code-Signatur (Zertifikat oder Microsoft Store), kostenlose Lizenz mit E-Mail über Lemon Squeezy/Gumroad/Payhip, R8/Obfuskation bei Android-Release-Builds, Marke „Martlsoft“ beim DPMA
 
 ## 5. Später / Ideen
