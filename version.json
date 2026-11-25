@@ -1,0 +1,42 @@
+{
+    "hinweis":  "Aktuelle Versionen der Martlsoft-Windows-Programme. Wird von Pruefsummen-erstellen.ps1 erzeugt - nicht von Hand aendern.",
+    "erstellt":  "2026-11-25",
+    "apps":  {
+                 "maki-delta":  {
+                                    "name":  "MaKi.DELTA",
+                                    "version":  "1.1",
+                                    "datum":  "2026-11-25",
+                                    "seite":  "https://martlsoft.com/app.html?id=maki-delta#download",
+                                    "dateien":  {
+                                                    "setup":  {
+                                                                  "datei":  "MaKi.DELTA-Setup-1.1.exe",
+                                                                  "groesse":  2721337,
+                                                                  "sha256":  "a2a8f66da98f16403797c8d1f627de42817b651a40b5ea940384ef9a390c6a00"
+                                                              },
+                                                    "zip":  {
+                                                                "datei":  "MaKi.DELTA-1.1-portable.zip",
+                                                                "groesse":  851910,
+                                                                "sha256":  "8d11ec07c6d6e4a543d7060fe91f222734decb373a0fb9cb80b39b866bd02a71"
+                                                            }
+                                                }
+                                },
+                 "maki-weather":  {
+                                      "name":  "MaKi.WEATHER",
+                                      "version":  "1.0.12",
+                                      "datum":  "2026-11-25",
+                                      "seite":  "https://martlsoft.com/app.html?id=maki-weather#download",
+                                      "dateien":  {
+                                                      "setup":  {
+                                                                    "datei":  "MaKi.WEATHER-Setup-1.0.12.exe",
+                                                                    "groesse":  2220302,
+                                                                    "sha256":  "cf5e3db3a0237508367643c0267d09a96b8bc8e4fb7b6c10d0dbe936dde6c574"
+                                                                },
+                                                      "zip":  {
+                                                                  "datei":  "MaKi.WEATHER-1.0.12-portable.zip",
+                                                                  "groesse":  179998,
+                                                                  "sha256":  "d7f4e967ff21276adaefe8cab670a10b3a38ee92f610740bce41ed08ab65bf56"
+                                                              }
+                                                  }
+                                  }
+             }
+}

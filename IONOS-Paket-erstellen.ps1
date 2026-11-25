@@ -10,8 +10,8 @@ if (Test-Path $out) { Remove-Item $out -Recurse -Force }
 New-Item -ItemType Directory $out | Out-Null
 
 # Nur die Website-Dateien kopieren (kein .git, keine Anleitungen, kein Skript)
-$skip = @(".git", ".nojekyll", "IONOS-Paket-erstellen.ps1", "ANLEITUNG-IONOS.md", "TODO.md")
-Get-ChildItem $src -Force | Where-Object { $skip -notcontains $_.Name } | ForEach-Object {
+$skip = @(".git", ".gitignore", ".nojekyll", "ANLEITUNG-IONOS.md", "TODO.md", "daten")
+Get-ChildItem $src -Force | Where-Object { $skip -notcontains $_.Name -and $_.Extension -ne ".ps1" } | ForEach-Object {
   Copy-Item $_.FullName -Destination $out -Recurse -Force
 }
 

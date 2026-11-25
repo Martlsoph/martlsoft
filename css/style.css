@@ -312,8 +312,7 @@ a.guide-link:hover { color: var(--bright); text-decoration-color: var(--bright);
 .dl-card .btn { word-break: break-all; }
 .dl-meta { color: var(--soft); font-size: .9rem; margin-top: 4px; }
 .dl-hash { margin-top: 6px; font-size: .85rem; color: var(--soft); max-width: 100%; }
-.dl-hash summary { cursor: pointer; }
-.dl-hash code { display: block; margin-top: 6px; padding: 8px 10px; background: var(--bg); border-radius: 10px; word-break: break-all; font-size: .8rem; color: var(--ink); }
+.dl-hash code { display: block; margin-top: 4px; user-select: all; padding: 8px 10px; background: var(--bg); border-radius: 10px; word-break: break-all; font-size: .8rem; color: var(--ink); }
 .dl-info { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; margin-top: 24px; }
 .dl-info .box { background: #fff; border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow); border: 1px solid var(--outline); }
 .dl-info h3 { margin-top: 0; }

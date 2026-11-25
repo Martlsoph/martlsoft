@@ -47,6 +47,10 @@
     <!--HOSTING-IONOS-START
     <p>Hosting-Anbieter: IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Deutschland. Die Server stehen in Deutschland. Mit IONOS besteht ein Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO.</p>
     HOSTING-IONOS-END-->
+    <!--HOSTING-IONOS-START
+    <h3 id="download-zaehler">Download-Zähler</h3>
+    <p>Wenn du ein Windows-Programm herunterlädst, zähle ich mit, wie oft welche App in welcher Version heruntergeladen wurde. Gespeichert wird dabei nur ein Zähler je App, Version, Paket (Setup oder ZIP) und Tag – keine IP-Adresse, keine Cookies, keine Angaben zu Browser oder Gerät. Ein Rückschluss auf dich ist damit nicht möglich. Die Zählung hilft mir zu sehen, welche Programme genutzt werden, und das Angebot weiterzuentwickeln (Art. 6 Abs. 1 lit. f DSGVO). Die Server-Protokolle des Hosting-Anbieters (siehe oben) bleiben davon unberührt.</p>
+    HOSTING-IONOS-END-->
 
     <h2 id="apps">3. Meine Apps</h2>
 
@@ -59,16 +63,18 @@
       <li>Kartenbilder, Postleitzahl-Suche und Ortsnamen zum Standort: OpenStreetMap Foundation (openstreetmap.org, Tile-Server und Nominatim) – <a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">Datenschutz der OSMF</a></li>
       <li>Aktueller Standort: nur wenn du auf <b>Aktuellen Standort verwenden</b> klickst und es erlaubst. Die Position wird nur für diesen Ort verwendet und nicht im Hintergrund abgefragt.</li>
       <li>Die Windows-Version zeigt ihre Oberfläche über Microsoft Edge bzw. Google Chrome an, die auf deinem Computer installiert sind. Die App selbst läuft dabei lokal (localhost).</li>
-      <li>Herunterladen: Beim Download von dieser Webseite fallen nur die unter Punkt 2 genannten Server-Protokolldaten an.</li>
+      <li id="update-pruefung">Update-Prüfung (nur Windows-Version, nur mit deiner Zustimmung): Beim ersten Start fragt die App, ob sie nach Updates suchen darf. Nur wenn du zustimmst, lädt sie höchstens einmal am Tag die Datei <code>martlsoft.com/version.json</code> und vergleicht die Versionsnummer. Dabei werden keine Daten über dich, deinen Computer oder deine Orte gesendet und keine Cookies verwendet. Wie bei jedem Seitenaufruf verarbeitet der Hosting-Anbieter (Punkt 2) technisch deine IP-Adresse in seinen Server-Protokollen; ich werte diese nicht aus (Art. 6 Abs. 1 lit. a DSGVO). Updates werden nie automatisch geladen oder installiert. Abschalten kannst du die Prüfung jederzeit im Menü unter „Updates“.</li>
+      <li>Herunterladen: Beim Download von dieser Webseite fallen nur die unter Punkt 2 genannten Server-Protokolldaten und der anonyme Download-Zähler an.</li>
     </ul>
 
     <h3 id="maki-delta">MaKi.DELTA (Windows)</h3>
-    <p>MaKi.DELTA vergleicht Dateien und Ordner ausschließlich auf deinem Computer. Die App baut keine Verbindung ins Internet auf, enthält keine Werbung, keine Analyse-Werkzeuge und kein Nutzerkonto. Inhalte der Dateien, die du vergleichst, werden weder gespeichert noch an mich oder Dritte übermittelt.</p>
+    <p>MaKi.DELTA vergleicht Dateien und Ordner ausschließlich auf deinem Computer. Die App arbeitet offline (Ausnahme: die freiwillige Update-Prüfung, siehe unten), enthält keine Werbung, keine Analyse-Werkzeuge und kein Nutzerkonto. Inhalte der Dateien, die du vergleichst, werden weder gespeichert noch an mich oder Dritte übermittelt.</p>
     <ul>
       <li>Dateien und Ordner: Die App liest nur die Dateien und Ordner, die du selbst auswählst. Schreiben (Speichern, Kopieren, Synchronisieren) geschieht nur, wenn du es auslöst und Windows bzw. der Browser es erlaubt hat.</li>
       <li>Einstellungen (z.&nbsp;B. Ansicht, Schalter, Ausschlüsse) werden nur lokal unter <code>%LOCALAPPDATA%\MaKi-Delta</code> gespeichert und beim Deinstallieren gelöscht.</li>
-      <li>Die App zeigt ihre Oberfläche über Microsoft Edge bzw. Google Chrome an, die auf deinem Computer installiert sind. Die App läuft dabei nur lokal (localhost) und ruft keine Internetseiten auf.</li>
-      <li>Herunterladen: Beim Download von dieser Webseite fallen nur die unter Punkt 2 genannten Server-Protokolldaten an.</li>
+      <li>Die App zeigt ihre Oberfläche über Microsoft Edge bzw. Google Chrome an, die auf deinem Computer installiert sind. Die App läuft dabei nur lokal (localhost).</li>
+      <li>Update-Prüfung (nur mit deiner Zustimmung): Beim ersten Start fragt die App, ob sie nach Updates suchen darf. Nur wenn du zustimmst, lädt sie höchstens einmal am Tag die Datei <code>martlsoft.com/version.json</code> und vergleicht die Versionsnummer. Sonst baut die App keine Verbindung ins Internet auf. Gesendet werden keine Daten über dich, deinen Computer oder deine Dateien, es werden keine Cookies verwendet. Wie bei jedem Seitenaufruf verarbeitet der Hosting-Anbieter (Punkt 2) technisch deine IP-Adresse in seinen Server-Protokollen; ich werte diese nicht aus (Art. 6 Abs. 1 lit. a DSGVO). Updates werden nie automatisch geladen oder installiert. Abschalten kannst du die Prüfung jederzeit im Menü unter Einstellungen.</li>
+      <li>Herunterladen: Beim Download von dieser Webseite fallen nur die unter Punkt 2 genannten Server-Protokolldaten und der anonyme Download-Zähler an.</li>
     </ul>
 
     <h3 id="maki-volume">MaKi.VOL</h3>
@@ -146,6 +152,7 @@
       <div><h4>Rechtliches</h4><ul>
         <li><a href="impressum.html">Impressum</a></li>
         <li><a href="datenschutz.html">Datenschutz</a></li>
+        <li><a href="lizenz.html">Lizenz</a></li>
         <li><a href="mailto:martlshop.co@gmail.com">Kontakt</a></li>
         <li><a href="index.html#unterstuetzen">Unterstützen</a></li>
       </ul></div>

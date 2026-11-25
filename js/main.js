@@ -133,14 +133,15 @@
           <p>${f.text}</p>
           <a class="btn ${i === 0 ? "btn-lemon" : "btn-blue"}" href="${esc(f.file)}" download>⬇ ${esc(name(f.file))}</a>
           <div class="dl-meta">${esc(f.size)}</div>
-          ${f.sha256 ? `<details class="dl-hash"><summary>Prüfsumme (SHA-256)</summary><code>${esc(f.sha256)}</code></details>` : ""}
+          ${f.sha256 ? `<div class="dl-hash"><span>Prüfsumme (SHA-256)</span><code title="Zum Markieren doppelklicken">${esc(f.sha256)}</code></div>` : ""}
         </div>`).join("")}
       </div>
       <div class="dl-info">
         <div class="box reveal"><h3>So geht’s</h3><ol class="dl-steps">${d.steps.map((s) => `<li>${s}</li>`).join("")}</ol></div>
         <div class="box reveal"><h3>Voraussetzungen</h3><p>${esc(d.requirements)}</p>
-          <h3>Echtheit prüfen</h3><p>Wer sichergehen will: In PowerShell <code>Get-FileHash Dateiname</code> eingeben und mit der Prüfsumme oben vergleichen.</p>
-          <p><a href="datenschutz.html#${esc(a.id)}">Datenschutz</a> · <a href="impressum.html">Impressum</a> · Fragen: <a href="mailto:martlshop.co@gmail.com">martlshop.co@gmail.com</a></p></div>
+          <h3>Echtheit prüfen</h3><p>Lade ${esc(a.name)} nur hier von martlsoft.com. Wer sichergehen will: In PowerShell <code>Get-FileHash Dateiname</code> eingeben und mit der Prüfsumme oben vergleichen. Stimmt sie nicht überein, die Datei bitte nicht starten.</p>
+          <h3>Lizenz</h3><p>Kostenlos für private und berufliche Nutzung. Weitergabe nur über martlsoft.com – Details in den <a href="lizenz.html">Lizenzbedingungen</a>.</p>
+          <p><a href="datenschutz.html#${esc(a.id)}">Datenschutz</a> · <a href="lizenz.html">Lizenz</a> · <a href="impressum.html">Impressum</a> · Fragen: <a href="mailto:martlshop.co@gmail.com">martlshop.co@gmail.com</a></p></div>
       </div>
     </section>`;
   }

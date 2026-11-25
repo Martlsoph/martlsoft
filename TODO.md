@@ -64,6 +64,23 @@ Auf jeder App-Seite gibt es einen Bereich „Screenshots“. Wo noch keine Bilde
 - [x] Abschnitt „Martlsoft unterstützen“ mit PayPal-Link (nur normaler Link, kein PayPal-Script), Fußzeilen-Link „Unterstützen“, Datenschutz Abschnitt 6 (24.11.2026, auf GitHub und IONOS)
 - [ ] Optional: GitHub-Testseite abschalten (Repository → Settings → Pages → Unpublish) – ⚠️ **erst nachdem** die Domain bei IONOS auf `/martlsoft` zeigt! Derzeit kommt martlsoft.com von GitHub Pages; Abschalten würde die Website offline nehmen
 
+## 4a. Download-Kontrolle und Schutz (Stufe 1, umgesetzt am 25.11.2026)
+
+Auftrag: `app.dev\251126.todo.claude-code-auftrag-martlsoft-downloads.md`
+
+- [x] `download.php` + `inc/martlsoft.php`: zählt App, Version, Paket (setup/zip) und Tag – keine IP, keine Cookies. Whitelist = `version.json`, Dateisperre (flock), kein Path-Traversal. Alte Links `downloads/<app>/<datei>` leitet die `.htaccess` auf `download.php` um, die Dateien sind direkt nicht mehr abrufbar. Zählerstand liegt auf dem Webspace in `/martlsoft/daten/downloads.json` (nicht im Paket, wird beim Hochladen nicht überschrieben)
+- [x] `stats.php`: passwortgeschützte Übersicht (heute, Monat, gesamt; pro Monat und App; pro Version und Paket)
+- [x] `Pruefsummen-erstellen.ps1`: nach jedem neuen Release ausführen – schreibt `SHA256.txt`, `version.json` und trägt Version, Dateinamen, Größe und SHA-256 in `js/apps.js` ein. Prüfsumme steht jetzt sichtbar unter dem Download-Knopf
+- [x] Lizenzbedingungen (Entwurf): `lizenz.html` + `LIZENZ.txt` in Setup (muss bestätigt werden) und ZIP, Fußzeilen-Link „Lizenz“
+- [x] Update-Prüfung in MaKi.DELTA 1.1 und MaKi.WEATHER 1.0.12 (fragt beim ersten Start, abschaltbar, liest `version.json`); neue Releases liegen in `downloads/`
+- [x] Datenschutz: Download-Zähler (nur IONOS-Fassung) und Update-Prüfung bei beiden Apps ergänzt
+- [ ] **Hochladen:** GitHub (`git push`) und IONOS (`IONOS-Paket-erstellen.ps1`, dann `..\IONOS-Hochladen.ps1`). Erst dann findet die Update-Prüfung `version.json`
+- [ ] **Statistik-Passwort setzen:** `app.dev\Statistik-Passwort-setzen.ps1` ausführen – liegt bewusst außerhalb des öffentlichen Repos, neben `IONOS-Hochladen.ps1` (Passwort selbst eintippen, danach das SFTP-Passwort)
+- [ ] **Auf IONOS testen** (lokal gibt es kein PHP): `https://martlsoft.com/download.php?app=maki-weather` lädt die Datei, `stats.php` zählt sie; `…/daten/downloads.json` liefert 404. Geht erst, wenn die Domain auf IONOS zeigt (siehe Abschnitt 1) – solange GitHub Pages ausliefert, wird direkt geladen und nicht gezählt
+- [ ] Lizenzbedingungen rechtlich prüfen lassen, danach „Entwurf“ aus `lizenz.html` und `LIZENZ.txt` entfernen
+- [ ] Impressum, Datenschutz und MaKi.DELTA-App nennen noch die alte Anschrift (Nußbaumstr. 3, Schwabmünchen) – prüfen, ob auf die neue Anschrift umgestellt werden muss
+- Später (Stufe 2+): Code-Signatur (Zertifikat oder Microsoft Store), kostenlose Lizenz mit E-Mail über Lemon Squeezy/Gumroad/Payhip, R8/Obfuskation bei Android-Release-Builds, Marke „Martlsoft“ beim DPMA
+
 ## 5. Später / Ideen
 
 - [ ] Pro-Version (Freemium): Basis bleibt kostenlos, neue Extras gegen 1 €/Monat bzw. 10 €/Jahr. Am besten zuerst beim MaKi.TRANS (Übersetzen ohne eigenen Schlüssel). Vorher: Zahlungsprofil in der Play Console, Gewerbe/Steuer klären, Texte und Datenschutz anpassen.

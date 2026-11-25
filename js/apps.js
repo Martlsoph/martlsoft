@@ -69,24 +69,24 @@ const APPS = [
       "img/screenshots/maki-weather-pc-2-santo-domingo-dunkel.png"
     ],
     download: {
-      version: "1.0.11",
+      version: "1.0.12",
       date: "November 2026",
       requirements: "Windows 10 oder 11 (64 Bit) mit Microsoft Edge (vorinstalliert) oder Google Chrome und eine Internetverbindung (für Wetter, Radar und Karte)",
       files: [
         {
           label: "Installieren",
           hint: "empfohlen",
-          file: "downloads/maki-weather/MaKi.WEATHER-Setup-1.0.11.exe",
+          file: "downloads/maki-weather/MaKi.WEATHER-Setup-1.0.12.exe",
           size: "2,1 MB",
-          sha256: "cc1e03563c2c128a70386205d78d1f33d5a01d6e7442b292b559cf45670d662e",
+          sha256: "cf5e3db3a0237508367643c0267d09a96b8bc8e4fb7b6c10d0dbe936dde6c574",
           text: "Mit Startmenü-Eintrag und auf Wunsch Desktop-Symbol. Keine Administratorrechte nötig. Entfernen über <b>Einstellungen → Apps</b>."
         },
         {
           label: "Ohne Installation (ZIP)",
           hint: "z. B. für den USB-Stick",
-          file: "downloads/maki-weather/MaKi.WEATHER-1.0.11-portable.zip",
-          size: "171 KB",
-          sha256: "983a73b994057a6dc214da78da505d7046a2c8216ec4cbb786c81e54ccb08a5f",
+          file: "downloads/maki-weather/MaKi.WEATHER-1.0.12-portable.zip",
+          size: "176 KB",
+          sha256: "d7f4e967ff21276adaefe8cab670a10b3a38ee92f610740bce41ed08ab65bf56",
           text: "Entpacken und <b>MaKi.WEATHER.exe</b> starten. Nichts wird installiert – zum Entfernen einfach den Ordner löschen."
         }
       ],
@@ -128,24 +128,24 @@ const APPS = [
       "img/screenshots/maki-delta-start.png"
     ],
     download: {
-      version: "1.0",
+      version: "1.1",
       date: "November 2026",
       requirements: "Windows 10 oder 11 (64 Bit) mit Microsoft Edge (vorinstalliert) oder Google Chrome",
       files: [
         {
           label: "Installieren",
           hint: "empfohlen",
-          file: "downloads/maki-delta/MaKi.DELTA-Setup-1.0.exe",
+          file: "downloads/maki-delta/MaKi.DELTA-Setup-1.1.exe",
           size: "2,6 MB",
-          sha256: "5447b0529972af7683f3a173198ef4195f37452521998f709ca70fa519d65dd9",
+          sha256: "a2a8f66da98f16403797c8d1f627de42817b651a40b5ea940384ef9a390c6a00",
           text: "Mit Startmenü-Eintrag und auf Wunsch Desktop-Symbol. Keine Administratorrechte nötig. Entfernen über <b>Einstellungen → Apps</b>."
         },
         {
           label: "Ohne Installation (ZIP)",
           hint: "z. B. für den USB-Stick",
-          file: "downloads/maki-delta/MaKi.DELTA-1.0-portable.zip",
-          size: "827 KB",
-          sha256: "cff658db03a78924da3c660dc4138fd61154754ba1e8dfde2f1fc17d14f14c41",
+          file: "downloads/maki-delta/MaKi.DELTA-1.1-portable.zip",
+          size: "832 KB",
+          sha256: "8d11ec07c6d6e4a543d7060fe91f222734decb373a0fb9cb80b39b866bd02a71",
           text: "Entpacken und <b>MaKi.DELTA.exe</b> starten. Nichts wird installiert – zum Entfernen einfach den Ordner löschen."
         }
       ],
