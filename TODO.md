@@ -50,6 +50,7 @@ Auf jeder App-Seite gibt es einen Bereich „Screenshots“. Wo noch keine Bilde
 - [ ] MaKi.TRANS einreichen – vorher auf dem eigenen Handy testen (Android 15/16)
 - [ ] MaKi.SHOP: `.aab` bauen und einreichen
 - [ ] MaKi.TODO: Upload-Schlüssel anlegen, `.aab` bauen, Store-Eintrag schreiben und einreichen (Details in `MaKi.TODO\TODO.md`)
+- [ ] **Geplant (wenn die erste App bei Google Play ist, ca. Anfang Dezember 2026):** Status-Schildchen auf den App-Karten farbig machen: **grün** = verfügbar (bei Google Play bzw. zum Download), **gelb** = noch nicht da („Bald bei Google Play“, „Erscheint bald“). Erst dann umsetzen, nicht vorher.
 - [ ] Sobald eine App im Store ist: Play-Link in `js/apps.js` bei `play` eintragen und `status: "play"` setzen → auf der Website erscheint dann der Knopf „Bei Google Play laden“
 - [ ] Datenschutz-Link im Play Store: `https://martlsoft.com/datenschutz.html#<app-id>`
 
