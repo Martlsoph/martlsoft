@@ -23,9 +23,82 @@
    description darf <b>, <i> und <a href="..."> enthalten
    art         Bild oben auf der Karte und Hintergrund der App-Seite
                (img/art/...), darf auch ein Foto (.jpg) sein
+   badge       (optional) eigener Text auf der App-Karte statt des Status
+   playSoon    (optional) true = zusätzlich „Bald bei Google Play“ (bei status "windows")
+   privacy     (optional) eigener Satz unter „Auf einen Blick“ statt „Kein Internetzugriff …“
+   platformText (optional) eigener Plattform-Satz unter „Auf einen Blick“
+   Screenshots mit „-pc-“ im Namen werden breit, mit „-handy-“ hoch angezeigt.
    ===================================================================== */
 
 const APPS = [
+  {
+    id: "maki-weather",
+    name: "MaKi.WEATHER",
+    tagline: "Wetter & Regenradar",
+    short: "Wetter für alle deine Orte – Zuhause, Hotel, Urlaub – mit Regenradar vom Deutschen Wetterdienst. Für Windows, bald auch für Android.",
+    category: "Alltag",
+    platform: "windows",
+    icon: "img/apps/maki-weather.svg",
+    art: "img/art/wetter.svg",
+    status: "windows",
+    badge: "Für Windows · bald Android",
+    playSoon: true,
+    privacy: "Kein Konto, kein Tracking – deine Orte bleiben bei dir",
+    platformText: "Für Windows 10 und 11 · bald für Android",
+    play: "",
+    neu: true,
+    description:
+      "MaKi.WEATHER zeigt dir das Wetter für die Orte, die dir wichtig sind: dein Zuhause, das Hotel auf der Dienstreise oder den Urlaubsort. Auf einen Blick siehst du Temperatur, Regenrisiko, Wind und Sonnenzeiten, dazu die nächsten 24 Stunden und die 7-Tage-Vorhersage mit klaren Höchst- und Tiefstwerten. Das Regenradar des Deutschen Wetterdienstes zeigt dir, wo es gerade regnet – 12 Stunden zurück und 2 Stunden in die Zukunft. Ohne Konto, ohne Werbung: Deine Orte bleiben auf deinem Gerät. Die Windows-Version kannst du hier kostenlos herunterladen, die Android-Version kommt bald zu Google Play.",
+    features: [
+      "Aktuelles Wetter, gefühlte Temperatur, Regen, Wind, Luftfeuchte, Luftdruck, UV und Sonne",
+      "Stündlich für 24 Stunden und 7-Tage-Vorhersage mit max. und min. Temperatur",
+      "Regenradar des Deutschen Wetterdienstes: 12 Stunden Rückblick, 2 Stunden Vorschau, abspielbar",
+      "Außerhalb Deutschlands weltweites Radar (RainViewer)",
+      "Mehrere Orte als Zuhause, Hotel/Unterwegs, Urlaub oder Sonstiger Ort",
+      "Suche nach Ortsname oder Postleitzahl – oder einfach den aktuellen Standort nehmen",
+      "Ortszeit mit Zeitzone (z. B. MEZ) für jeden Ort",
+      "Deutsch, Englisch, Spanisch, Französisch und Italienisch, hell und dunkel",
+      "°C oder °F, km/h, m/s, mph oder Knoten",
+      "Kein Konto, keine Werbung, kein Tracking"
+    ],
+    screenshots: [
+      "img/screenshots/maki-weather-pc-1-dashboard.png",
+      "img/screenshots/maki-weather-handy-1-wetter.png",
+      "img/screenshots/maki-weather-handy-2-radar.png",
+      "img/screenshots/maki-weather-handy-4-7tage.png",
+      "img/screenshots/maki-weather-handy-5-orte.png",
+      "img/screenshots/maki-weather-pc-2-santo-domingo-dunkel.png"
+    ],
+    download: {
+      version: "1.0.10",
+      date: "November 2026",
+      requirements: "Windows 10 oder 11 (64 Bit) mit Microsoft Edge (vorinstalliert) oder Google Chrome und eine Internetverbindung (für Wetter, Radar und Karte)",
+      files: [
+        {
+          label: "Installieren",
+          hint: "empfohlen",
+          file: "downloads/maki-weather/MaKi.WEATHER-Setup-1.0.10.exe",
+          size: "2,1 MB",
+          sha256: "4650d872df2356bbb64533ab2c32c96d22504cb039b10224f9775121e0b700af",
+          text: "Mit Startmenü-Eintrag und auf Wunsch Desktop-Symbol. Keine Administratorrechte nötig. Entfernen über <b>Einstellungen → Apps</b>."
+        },
+        {
+          label: "Ohne Installation (ZIP)",
+          hint: "z. B. für den USB-Stick",
+          file: "downloads/maki-weather/MaKi.WEATHER-1.0.10-portable.zip",
+          size: "171 KB",
+          sha256: "f5d58d54c1f667e323dbf5789e5c8f227723bd9f30953afa7bd3d1937e1afc2d",
+          text: "Entpacken und <b>MaKi.WEATHER.exe</b> starten. Nichts wird installiert – zum Entfernen einfach den Ordner löschen."
+        }
+      ],
+      steps: [
+        "Datei herunterladen und doppelklicken.",
+        "Falls Windows meldet „Der Computer wurde durch Windows geschützt“: auf <b>Weitere Informationen</b> und dann <b>Trotzdem ausführen</b> klicken. Die Warnung kommt, weil die App (noch) nicht digital signiert ist.",
+        "Beim Setup dem Assistenten folgen – fertig. MaKi.WEATHER findest du danach im Startmenü.",
+        "Beim ersten Start einen Ort suchen (Name oder Postleitzahl) oder auf <b>Aktuellen Standort verwenden</b> klicken."
+      ]
+    }
+  },
   {
     id: "maki-delta",
     name: "MaKi.DELTA",

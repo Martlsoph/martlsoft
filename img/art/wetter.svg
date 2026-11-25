@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d47a1"/><stop offset=".6" stop-color="#1e88e5"/><stop offset="1" stop-color="#4fc3f7"/>
+    </linearGradient>
+    <radialGradient id="sun" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fff44f"/><stop offset=".6" stop-color="#ffe066"/><stop offset="1" stop-color="#fff44f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cloud" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#d6e4ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#sky)"/>
+  <!-- Radar-Ringe -->
+  <g fill="none" stroke="#bbdefb" stroke-width="3" opacity=".35">
+    <circle cx="250" cy="420" r="90"/><circle cx="250" cy="420" r="170"/><circle cx="250" cy="420" r="250"/>
+  </g>
+  <path d="M250 420 L490 330 A250 250 0 0 0 420 240 Z" fill="#4fc3f7" opacity=".25"/>
+  <circle cx="250" cy="420" r="12" fill="#fff44f" stroke="#0d1b3e" stroke-width="5"/>
+  <!-- Regenflächen wie auf dem Radar -->
+  <g opacity=".55">
+    <path d="M90 250c40-30 110-20 130 10s60 20 70 60-40 70-90 60-60 10-100-10-50-90-10-120z" fill="#26c6da"/>
+    <path d="M140 280c20-15 55-10 65 5s25 15 30 35-20 35-45 30-40 0-55-10-15-45 5-60z" fill="#66bb6a"/>
+  </g>
+  <g transform="translate(1000 230) scale(.8) translate(-860 -230)">
+  <!-- Sonne hinter Wolke -->
+  <circle cx="860" cy="200" r="170" fill="url(#sun)" opacity=".75"/>
+  <circle cx="860" cy="200" r="74" fill="#fff44f"/>
+  <path d="M700 300a70 70 0 0 1 132-26 56 56 0 0 1 94 40 48 48 0 0 1-8 96H716a56 56 0 0 1-16-110z" fill="url(#cloud)"/>
+  <!-- Regentropfen -->
+  <g stroke="#90caf9" stroke-width="10" stroke-linecap="round">
+    <path d="M760 450l-14 36"/><path d="M820 450l-14 36"/><path d="M880 450l-14 36"/><path d="M790 510l-14 36"/><path d="M850 510l-14 36"/>
+  </g>
+  </g>
+  <!-- kleine Wolken -->
+  <g fill="#fff" opacity=".8">
+    <path d="M1010 120a30 30 0 0 1 56-10 24 24 0 0 1 40 18 20 20 0 0 1-4 40h-84a24 24 0 0 1-8-48z"/>
+    <path d="M520 110a24 24 0 0 1 44-8 19 19 0 0 1 32 14 16 16 0 0 1-3 32h-67a19 19 0 0 1-6-38z" opacity=".7"/>
+  </g>
+  <!-- Thermometer -->
+  <g transform="translate(1140 360) scale(.8)">
+    <rect x="-16" y="0" width="32" height="150" rx="16" fill="#fff" opacity=".9"/>
+    <rect x="-7" y="60" width="14" height="90" rx="7" fill="#ff7043"/>
+    <circle cx="0" cy="170" r="30" fill="#fff" opacity=".9"/><circle cx="0" cy="170" r="20" fill="#ff7043"/>
+  </g>
+</svg>

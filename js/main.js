@@ -80,7 +80,7 @@
         ${a.neu ? `<span class="neu">Neu</span>` : ""}
         <div class="card-top"><img src="${esc(a.icon)}" alt="Symbol ${esc(a.name)}"><div><h3>${esc(a.name)}</h3><span class="tag">${esc(a.tagline)}</span></div></div>
         <p>${esc(a.short)}</p>
-        <div class="card-foot"><span class="badge ${st.cls}">${st.text}</span><span class="more">Ansehen</span></div>
+        <div class="card-foot"><span class="badge ${st.cls}">${esc(a.badge || st.text)}</span><span class="more">Ansehen</span></div>
       </a>`;
     }
     function render() {
@@ -167,16 +167,18 @@
         : a.status === "play" && a.play
         ? `<a class="btn btn-lemon" href="${esc(a.play)}" target="_blank" rel="noopener">▶ Bei Google Play laden</a>`
         : `<span class="btn btn-light" aria-disabled="true">${a.status === "apk" ? "Noch nicht im Play Store" : "Bald bei Google Play"}</span>`;
+      // Windows-Download jetzt, Android-Version angekündigt
+      const soonBtn = a.playSoon && a.status === "windows" ? `<span class="btn btn-light" aria-disabled="true">Bald bei Google Play</span>` : "";
       $("#appHero").innerHTML = `
         <a class="crumb" href="index.html#apps">← Alle Apps</a>
         <div class="app-hero">
           <img src="${esc(a.icon)}" alt="Symbol ${esc(a.name)}">
           <div><h1>${esc(a.name)}</h1><div class="tag">${esc(a.tagline)} · ${esc(a.category)}</div>
-          <div class="btns">${playBtn}${a.guide ? `<a class="btn btn-lemon" href="#anleitung">📖 ${esc(a.guide.button || "Anleitung")}</a>` : ""}<a class="btn btn-ghost" href="datenschutz.html#${esc(a.id)}">Datenschutz</a></div></div>
+          <div class="btns">${playBtn}${soonBtn}${a.guide ? `<a class="btn btn-lemon" href="#anleitung">📖 ${esc(a.guide.button || "Anleitung")}</a>` : ""}<a class="btn btn-ghost" href="datenschutz.html#${esc(a.id)}">Datenschutz</a></div></div>
         </div>`;
 
       const shots = (a.screenshots || []).length
-        ? a.screenshots.map((s) => `<img${a.platform === "windows" ? ' class="wide"' : ""} src="${esc(s)}" alt="Screenshot ${esc(a.name)}" loading="lazy">`).join("")
+        ? a.screenshots.map((s) => `<img${/-pc-/.test(s) || (a.platform === "windows" && !/-handy-/.test(s)) ? ' class="wide"' : ""} src="${esc(s)}" alt="Screenshot ${esc(a.name)}" loading="lazy">`).join("")
         : [1, 2, 3].map(() => `<div class="shot-ph"><img src="${esc(a.icon)}" alt="">Screenshots folgen</div>`).join("");
 
       detail.innerHTML = `
@@ -191,9 +193,9 @@
               <h3>Auf einen Blick</h3>
               <ul class="checks">
                 <li>Keine Werbung</li>
-                <li>${a.id === "maki-translator" ? "Texte gehen nur zum Übersetzen an die KI" : "Kein Internetzugriff, keine Datensammlung"}</li>
+                <li>${a.privacy ? esc(a.privacy) : a.id === "maki-translator" ? "Texte gehen nur zum Übersetzen an die KI" : "Kein Internetzugriff, keine Datensammlung"}</li>
                 <li>${a.download ? `Version ${esc(a.download.version)} · ${esc(a.download.date)}` : st.text}</li>
-                <li>${a.platform === "windows" ? "Für Windows 10 und 11" : "Für Android"}</li>
+                <li>${a.platformText ? esc(a.platformText) : a.platform === "windows" ? "Für Windows 10 und 11" : "Für Android"}</li>
                 ${a.guide ? `<li><a class="guide-link" href="#anleitung">Ausführliche Anleitung</a></li>` : ""}
               </ul>
             </div>
