@@ -9,6 +9,8 @@
   </defs>
   <rect width="1200" height="600" fill="url(#bg)"/>
   <g fill="#fff" opacity=".07"><circle cx="100" cy="80" r="3"/><circle cx="300" cy="540" r="3"/><circle cx="1100" cy="90" r="3"/><circle cx="880" cy="550" r="3"/><circle cx="580" cy="50" r="3"/></g>
+  <!-- Blätter verkleinert und tiefer gesetzt, damit die Menüleiste darüber lesbar bleibt -->
+  <g transform="translate(900 345) scale(0.62) translate(-900 -305)">
   <circle cx="900" cy="300" r="300" fill="url(#glow)"/>
   <!-- Linkes Dokument -->
   <g transform="rotate(-6 760 310)">
@@ -28,5 +30,6 @@
   <circle cx="900" cy="300" r="52" fill="#fff44f"/>
   <g fill="none" stroke="#0a2a66" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
     <path d="M873 287h54l-14-14"/><path d="M927 313h-54l14 14"/>
+  </g>
   </g>
 </svg>
