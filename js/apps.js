@@ -128,24 +128,24 @@ const APPS = [
       "img/screenshots/maki-delta-start.png"
     ],
     download: {
-      version: "1.1.1",
+      version: "1.1",
       date: "November 2026",
       requirements: "Windows 10 oder 11 (64 Bit) mit Microsoft Edge (vorinstalliert) oder Google Chrome",
       files: [
         {
           label: "Installieren",
           hint: "empfohlen",
-          file: "downloads/maki-delta/MaKi.DELTA-Setup-1.1.1.exe",
+          file: "downloads/maki-delta/MaKi.DELTA-Setup-1.1.exe",
           size: "2,6 MB",
-          sha256: "1b165f47549092c13d14aeb165412ef18e4aa922aac1ae7fa522202493edab0b",
+          sha256: "a2a8f66da98f16403797c8d1f627de42817b651a40b5ea940384ef9a390c6a00",
           text: "Mit Startmenü-Eintrag und auf Wunsch Desktop-Symbol. Keine Administratorrechte nötig. Entfernen über <b>Einstellungen → Apps</b>."
         },
         {
           label: "Ohne Installation (ZIP)",
           hint: "z. B. für den USB-Stick",
-          file: "downloads/maki-delta/MaKi.DELTA-1.1.1-portable.zip",
+          file: "downloads/maki-delta/MaKi.DELTA-1.1-portable.zip",
           size: "832 KB",
-          sha256: "d0b9805f572e1aa3e865a7dc5dd7607eb5d8277e353b46e353bdd8876eb355b0",
+          sha256: "8d11ec07c6d6e4a543d7060fe91f222734decb373a0fb9cb80b39b866bd02a71",
           text: "Entpacken und <b>MaKi.DELTA.exe</b> starten. Nichts wird installiert – zum Entfernen einfach den Ordner löschen."
         }
       ],
