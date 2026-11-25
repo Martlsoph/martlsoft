@@ -34,7 +34,7 @@ Auf jeder App-Seite gibt es einen Bereich „Screenshots“. Wo noch keine Bilde
 - [x] MaKi.TEXT: Screenshots eingebaut (21.11.2026)
 - [x] IONOS: Stand mit allen 8 Apps hochgeladen (21.11.2026, von dir gestartet)
 - [x] Hochladen: GitHub und IONOS (21.11.2026, mit MaKi.TODO). IONOS-Upload geht jetzt nach `/martlsoft` (`IONOS-Hochladen.ps1` angepasst), SFTP-Passwort am 21.11. neu gesetzt
-- [ ] IONOS: Beim Webspace steht „Keine Domain verbunden“ – martlsoft.com kommt noch von GitHub Pages. Wenn IONOS die echte Seite sein soll: Domain auf `/martlsoft` zeigen lassen (ANLEITUNG-IONOS.md, Schritt 5)
+- [x] IONOS: Domain martlsoft.com mit dem Webspace `/martlsoft` verbunden, SSL Starter Wildcard (Sectigo, gültig bis 24.05.2027) installiert (25.11.2026). DNS-Sicherung vorher: `app.dev\DNS-Sicherung-martlsoft-2026-11-25.md`
 
 **So machst du Screenshots am Handy:** Ein-/Aus-Taste und Leiser-Taste gleichzeitig kurz drücken. Die Bilder landen in der Galerie unter „Screenshots“. Schick sie dir per Mail oder Google Drive auf den PC, oder Claude erstellt sie im Emulator.
 
@@ -60,9 +60,9 @@ Auf jeder App-Seite gibt es einen Bereich „Screenshots“. Wo noch keine Bilde
 ## 4. Website
 
 - [x] martlsoft.com bei IONOS eingerichtet und online
-- [x] SSL geprüft (21.11.2026): gültiges Let's-Encrypt-Zertifikat für martlsoft.com bis 18.02.2027 (verlängert sich automatisch). Die Seite kommt derzeit von GitHub Pages, siehe IONOS-Punkt oben
+- [x] SSL geprüft (21.11.2026): gültiges Let's-Encrypt-Zertifikat für martlsoft.com bis 18.02.2027 (verlängert sich automatisch) – galt für GitHub Pages; seit 25.11.2026 IONOS-Zertifikat, siehe oben
 - [x] Abschnitt „Martlsoft unterstützen“ mit PayPal-Link (nur normaler Link, kein PayPal-Script), Fußzeilen-Link „Unterstützen“, Datenschutz Abschnitt 6 (24.11.2026, auf GitHub und IONOS)
-- [ ] Optional: GitHub-Testseite abschalten (Repository → Settings → Pages → Unpublish) – ⚠️ **erst nachdem** die Domain bei IONOS auf `/martlsoft` zeigt! Derzeit kommt martlsoft.com von GitHub Pages; Abschalten würde die Website offline nehmen
+- [x] GitHub Pages abgeschaltet (Unpublish + Quelle „None“, 25.11.2026). Das Repository bleibt die Quelle, martlsoft.com kommt nur noch von IONOS – Änderungen also immer per IONOS-Paket hochladen
 
 ## 4a. Download-Kontrolle und Schutz (Stufe 1, umgesetzt am 25.11.2026)
 
@@ -75,9 +75,9 @@ Auftrag: `app.dev\251126.todo.claude-code-auftrag-martlsoft-downloads.md`
 - [x] Update-Prüfung in MaKi.DELTA 1.1 und MaKi.WEATHER 1.0.12 (fragt beim ersten Start, abschaltbar, liest `version.json`); neue Releases liegen in `downloads/`
 - [x] Datenschutz: Download-Zähler (nur IONOS-Fassung) und Update-Prüfung bei beiden Apps ergänzt
 - [x] GitHub gepusht (25.11.2026): martlsoft.com liefert `version.json` (mit CORS), `lizenz.html` und die neuen Downloads DELTA 1.1 / WEATHER 1.0.12
-- [ ] **IONOS hochladen:** `IONOS-Paket-erstellen.ps1`, dann `..\IONOS-Hochladen.ps1` (SFTP-Passwort selbst eintippen)
-- [ ] **Statistik-Passwort setzen:** `app.dev\Statistik-Passwort-setzen.ps1` ausführen – liegt bewusst außerhalb des öffentlichen Repos, neben `IONOS-Hochladen.ps1` (Passwort selbst eintippen, danach das SFTP-Passwort)
-- [ ] **Auf IONOS testen** (lokal gibt es kein PHP): `https://martlsoft.com/download.php?app=maki-weather` lädt die Datei, `stats.php` zählt sie; `…/daten/downloads.json` liefert 404. Geht erst, wenn die Domain auf IONOS zeigt (siehe Abschnitt 1) – solange GitHub Pages ausliefert, wird direkt geladen und nicht gezählt
+- [x] **IONOS hochladen:** `IONOS-Paket-erstellen.ps1`, dann `..\IONOS-Hochladen.ps1` (SFTP-Passwort selbst eintippen) ✅ 25.11.2026. Danach kam 403 („unable to read htaccess“): mit `app.dev\IONOS-Rechte-reparieren.ps1` die Rechte gesetzt (Ordner 755, Dateien 644). Bei neuen Dateien nach dem Hochladen ggf. wieder ausführen
+- [x] **Statistik-Passwort setzen:** `app.dev\Statistik-Passwort-setzen.ps1` ausführen – liegt bewusst außerhalb des öffentlichen Repos, neben `IONOS-Hochladen.ps1` (Passwort selbst eintippen, danach das SFTP-Passwort) ✅ 25.11.2026
+- [x] **Auf IONOS getestet** (25.11.2026): Downloads Setup + ZIP (SHA-256 stimmt), alte Links leiten weiter, falsche App/Pfad → 404, `daten/` und `inc/` gesperrt, `version.json` mit CORS, http und www leiten auf https://martlsoft.com um, Mail-Einträge unverändert. Statistik: `https://martlsoft.com/stats.php`
 - [ ] Lizenzbedingungen rechtlich prüfen lassen, danach „Entwurf“ aus `lizenz.html` und `LIZENZ.txt` entfernen
 - [ ] **Etwa Mai 2027:** Anschrift auf Estweg 6, 86872 Scherstetten umstellen (Entscheidung 25.11.2026: bis dahin bleibt Nußbaumstr. 3, Schwabmünchen – passt zu Gewerbe-Anmeldung und D-U-N-S). Dann zusammen ändern: Gewerbe, D&B/D-U-N-S, Google Play, Impressum, Datenschutz, Startseite („Martin aus …“, Fußzeile), MaKi.DELTA-Menü (neue Version bauen)
 - Später (Stufe 2+): Code-Signatur (Zertifikat oder Microsoft Store), kostenlose Lizenz mit E-Mail über Lemon Squeezy/Gumroad/Payhip, R8/Obfuskation bei Android-Release-Builds, Marke „Martlsoft“ beim DPMA
