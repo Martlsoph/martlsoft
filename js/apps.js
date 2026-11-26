@@ -414,5 +414,37 @@ const APPS = [
         { q: "Geht das auch mit Facebook?", a: "Mit dem Facebook Messenger ja, über <b>Teilen …</b>. Die normale Facebook-App lässt keinen vorausgefüllten Text zu. Dort tippst du auf <b>Alles kopieren</b> und fügst den Text selbst ein. Bei LinkedIn landet geteilter Text als neuer Beitrag. Für Privatnachrichten dort ebenfalls kopieren und einfügen." }
       ]
     }
+  },
+  {
+    id: "maki-msg",
+    name: "MaKi.MSG",
+    tagline: "SMS groß & einfach",
+    short: "SMS und MMS mit großer Schrift und großen Knöpfen – ohne Werbung, ohne Internet.",
+    category: "Kommunikation",
+    icon: "img/apps/maki-msg.png",
+    art: "img/art/reise.svg",
+    banner: "img/apps/maki-msg-titel.png",
+    status: "bald",
+    play: "",
+    neu: true,
+    description:
+      "MaKi.MSG ersetzt die Nachrichten-App auf deinem Handy: große Schrift, große Knöpfe, klare Farben. SMS und Bild-Nachrichten (MMS) schreiben und empfangen, Sicherheitscodes mit einem Tipp kopieren, Nachrichten später senden und Spam aussortieren. Ohne Werbung und ohne Internet – deine Nachrichten bleiben auf deinem Handy.",
+    features: [
+      "Große Schrift in vier Stufen, hell oder dunkel",
+      "SMS, Bilder (MMS) und Gruppen-Nachrichten, zwei SIM-Karten",
+      "Sicherheitscodes mit einem Tipp kopieren – auch aus der Benachrichtigung",
+      "Später senden und eigene Schnellantworten",
+      "Spam-Schutz und Nummern blockieren",
+      "Übersetzen im Chat zusammen mit MaKi.TRANS",
+      "Datensicherung in eine Datei, die du selbst wählst"
+    ],
+    screenshots: [
+      "img/screenshots/maki-msg-unterhaltungen.png",
+      "img/screenshots/maki-msg-code-kopieren.png",
+      "img/screenshots/maki-msg-uebersetzen.png",
+      "img/screenshots/maki-msg-gruppe-mit-bild.png",
+      "img/screenshots/maki-msg-spaeter-senden.png",
+      "img/screenshots/maki-msg-einstellungen.png"
+    ]
   }
 ];
