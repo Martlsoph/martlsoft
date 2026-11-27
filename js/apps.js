@@ -446,5 +446,31 @@ const APPS = [
       "img/screenshots/maki-msg-spaeter-senden.png",
       "img/screenshots/maki-msg-einstellungen.png"
     ]
+  },
+  {
+    id: "maki-news",
+    name: "MaKi.NEWS",
+    tagline: "Deine Nachrichten, deine Quellen",
+    short: "Nachrichten aus den Quellen, die du selbst wählst – ohne Algorithmus, ohne Werbung, ohne Konto.",
+    category: "Lesen",
+    icon: "img/apps/maki-news.svg",
+    art: "img/art/text.svg",
+    status: "bald",
+    play: "",
+    neu: true,
+    privacy: "Kein Konto, kein Tracking – Quellen und Artikel bleiben auf deinem Handy",
+    description:
+      "MaKi.NEWS sammelt die Artikel deiner Lieblingsseiten an einem Ort. Du gibst einfach die Adresse einer Webseite ein, die App findet den Nachrichten-Feed selbst. Sortiere die Quellen nach Themen, blende Paywall-Artikel und doppelte Meldungen aus und lies alles im aufgeräumten Lesemodus. Mit einem Wisch nach links landet ein Artikel im Archiv, nach rechts bei „Lesenswert“ – dort bleibt er samt Bild dauerhaft und auch offline lesbar. Kein Algorithmus entscheidet, was du siehst: nur deine Quellen, neueste zuerst.",
+    features: [
+      "Quellen per Webseiten-Adresse hinzufügen – RSS- und Atom-Feeds werden automatisch gefunden",
+      "Eigene Themen als Tabs, Aktualisieren durch Herunterziehen",
+      "Lesemodus mit Bild, Autor und Lesezeit – ohne Werbung und Seitenballast",
+      "Paywall-Erkennung, Block- und Boost-Stichwörter, doppelte Meldungen zusammengefasst",
+      "Wischen: links ins Archiv, rechts „Lesenswert“ – mit Rückgängig",
+      "Suche über alle Artikel und „Mehr zum Thema“ aus anderen Quellen",
+      "Offline lesen und Quellen als Datei sichern oder übertragen",
+      "Deutsch, Englisch, Spanisch, Französisch und Italienisch"
+    ],
+    screenshots: []
   }
 ];
