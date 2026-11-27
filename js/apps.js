@@ -471,6 +471,12 @@ const APPS = [
       "Offline lesen und Quellen als Datei sichern oder übertragen",
       "Deutsch, Englisch, Spanisch, Französisch und Italienisch"
     ],
-    screenshots: []
+    screenshots: [
+      "img/screenshots/maki-news-feed.png",
+      "img/screenshots/maki-news-wischen.png",
+      "img/screenshots/maki-news-suche.png",
+      "img/screenshots/maki-news-quellen.png",
+      "img/screenshots/maki-news-filter.png"
+    ]
   }
 ];
